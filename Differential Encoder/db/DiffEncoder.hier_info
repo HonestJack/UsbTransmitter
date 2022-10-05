@@ -1,0 +1,40 @@
+|DiffEncoder
+clk => state~6.DATAIN
+dataIn => state.DATAB
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.DATAB
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+enableIn => state.OUTPUTSELECT
+reset => state~8.DATAIN
+dataOutPlus <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+dataOutMinus <= dataOutMinus.DB_MAX_OUTPUT_PORT_TYPE
+enableOut <= enableOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

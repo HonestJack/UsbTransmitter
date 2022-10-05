@@ -1,0 +1,9 @@
+
+State Machine - |DiffEncoder|state
+Name state.estado_5 state.estado_4 state.estado_3 state.estado_2 state.estado_1 state.estado_0 
+state.estado_0 0 0 0 0 0 0 
+state.estado_1 0 0 0 0 1 1 
+state.estado_2 0 0 0 1 0 1 
+state.estado_3 0 0 1 0 0 1 
+state.estado_4 0 1 0 0 0 1 
+state.estado_5 1 0 0 0 0 1 
