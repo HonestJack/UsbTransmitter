@@ -30,7 +30,6 @@ BEGIN
 		END IF;
 	END PROCESS;
 
--- agora descrevemos a função de saída
 	WITH state SELECT
 		dataOut 	<=	'0'	WHEN	estado_0,
 						'1'	WHEN	estado_1;

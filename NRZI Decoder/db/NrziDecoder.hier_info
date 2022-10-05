@@ -1,0 +1,9 @@
+|NrziDecoder
+clk => state.CLK
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+enable => state.ENA
+reset => state.ACLR
+dataOut <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+

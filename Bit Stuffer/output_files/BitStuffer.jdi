@@ -1,0 +1,9 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="00000000000000000000"/>
+  </project>
+  <file_info>
+    <file checksum="0x00073EDF" device="EP2C5T144C6" path="BitStuffer.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x075316C7" device="EPCS4" path="BitStuffer.pof" usercode="0x00000000"/>
+  </file_info>
+</sld_project_info>

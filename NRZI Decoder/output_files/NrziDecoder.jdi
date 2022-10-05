@@ -1,0 +1,9 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="00000000000000000000"/>
+  </project>
+  <file_info>
+    <file checksum="0x00073325" device="EP2C5T144C6" path="NrziDecoder.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x07533E08" device="EPCS4" path="NrziDecoder.pof" usercode="0x00000000"/>
+  </file_info>
+</sld_project_info>

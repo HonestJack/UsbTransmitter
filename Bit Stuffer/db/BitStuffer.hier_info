@@ -1,0 +1,31 @@
+|BitStuffer
+clk => state~7.DATAIN
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => state.OUTPUTSELECT
+dataIn => Selector1.IN3
+dataIn => Selector2.IN3
+dataIn => Selector3.IN3
+dataIn => Selector4.IN3
+dataIn => Selector5.IN3
+dataIn => Selector0.IN2
+dataIn => Selector0.IN3
+dataIn => Selector0.IN4
+dataIn => Selector0.IN5
+dataIn => Selector0.IN6
+enable => state.estado_6.OUTPUTSELECT
+enable => state.estado_5.OUTPUTSELECT
+enable => state.estado_4.OUTPUTSELECT
+enable => state.estado_3.OUTPUTSELECT
+enable => state.estado_2.OUTPUTSELECT
+enable => state.estado_1.OUTPUTSELECT
+enable => state.estado_0.OUTPUTSELECT
+reset => state~9.DATAIN
+dataOut <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+stopPiso <= stopPiso.DB_MAX_OUTPUT_PORT_TYPE
+
+
