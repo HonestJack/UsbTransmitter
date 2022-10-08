@@ -1,17 +1,18 @@
 ENTITY Controller IS
 	PORT(
 		clk	 			: IN	BIT;
-		enableOut		: IN	BIT;
-		stuffing			: IN	BIT;
-		loadShift		: IN	BIT;
-		valid				: IN	BIT;
-		resetIn			: IN	BIT;
-		enablePiso  	: OUT	BIT;
-		enableStuffer 	: OUT	BIT;
-		enableNrzi  	: OUT	BIT;
-		resetOut		  	: OUT	BIT;
-		syncData		  	: OUT	BIT;
-		Ready		 		: OUT	BIT);
+		enableOut		: IN	BIT;  -- OE_i
+		valid				: IN	BIT;  -- Valid_i
+		loadShift		: IN	BIT;  -- LS_i
+		stuffing			: IN	BIT;  -- ST_i
+		resetIn			: IN	BIT;  -- rst_i
+		
+		enablePiso  	: OUT	BIT;  -- E1_o
+		enableStuffer 	: OUT	BIT;  -- E2_o
+		enableNrzi  	: OUT	BIT;  -- E3_o
+		resetOut		  	: OUT	BIT;  -- R_o
+		syncData		  	: OUT	BIT;  -- SD_o
+		ready		 		: OUT	BIT); -- Ready_o
 END Controller;
 
 ARCHITECTURE comportamento OF Controller IS
@@ -19,51 +20,72 @@ ARCHITECTURE comportamento OF Controller IS
 	SIGNAL state: STATE_TYPE;
 
 BEGIN
-	PROCESS (clk, dataIn, enableIn, reset)
+	PROCESS (clk, enableOut, valid, loadShift, stuffing, resetIn)
 	BEGIN
-		IF reset = '1' THEN
+		IF resetIn = '1' THEN
 			state <= estado_0;			
 		ELSIF clk'EVENT AND clk = '1' THEN 
 			CASE state IS					
 				WHEN estado_0 =>
-						IF enableIn='1' THEN
-							IF dataIn='1' then state <= estado_1;
-							ELSE state <= estado_2;
-							END IF;
+						IF valid='1' then state <= estado_1;
 						END IF;
 				WHEN estado_1 =>
-						IF enableIn='0' then state <= estado_3;
-						ELSIF dataIn='0' then state <= estado_2;
-						END IF;
-				WHEN estado_2 =>
-						IF enableIn='0' then state <= estado_3;
-						ELSIF dataIn='1' then state <= estado_1;
-						END IF;
-				WHEN estado_3 =>        
+						state <= estado_2;
+				WHEN estado_2 =>        
+						state <= estado_3;
+				WHEN estado_3 =>
 						state <= estado_4;
 				WHEN estado_4 =>
-						state <= estado_5;
-				WHEN estado_5 =>
-						state <= estado_0;
+						IF valid='1' AND loadShift='1' AND stuffing='0' then state <= estado_5;
+						ELSIF valid='0' AND loadShift='1' AND stuffing='0' then state <= estado_6;
+						END IF;
+				WHEN estado_5 =>        
+						state <= estado_4;
+				WHEN estado_6 =>
+						IF stuffing='1' then state <= estado_7;
+						ELSE state <= estado_8;
+						END IF;
+				WHEN estado_7 =>
+						state <= estado_8;
+				WHEN estado_8 =>
+						IF enableOut='1' then state <= estado_0;
+						END IF;
 			END CASE;
 		END IF;
 	END PROCESS;
 
 	WITH state SELECT
-		dataOutMinus 	<=	'0' WHEN estado_1,
-								'1' WHEN estado_2,
-								'0' WHEN estado_3,
-								'0' WHEN estado_4,
-								'0' WHEN estado_5,
-								'1' WHEN OTHERS;
+		resetOut	<=	'1' WHEN estado_0,
+						'0' WHEN OTHERS;
 	WITH state SELECT
-		dataOutPlus 	<=	'1' WHEN estado_1,
-								'0' WHEN estado_2,
+		syncData <=	'1' WHEN estado_0,
+						'1' WHEN estado_1,
+						'1' WHEN estado_2,
+						'1' WHEN estado_3,
+						'0' WHEN OTHERS;
+	WITH state SELECT
+		enablePiso <=	'1' WHEN estado_1,
+							'1' WHEN estado_2,
+							'1' WHEN estado_3,
+							'1' WHEN estado_4,
+							'1' WHEN estado_5,
+							'0' WHEN OTHERS;
+	WITH state SELECT
+		enableStuffer <=	'1' WHEN estado_2,
 								'1' WHEN estado_3,
-								'0' WHEN estado_4,
+								'1' WHEN estado_4,
 								'1' WHEN estado_5,
+								'1' WHEN estado_6,
 								'0' WHEN OTHERS;
 	WITH state SELECT
-		enableOut 		<=	'0' WHEN	estado_0,
-								'1' WHEN	OTHERS;				
+		enableNrzi <=	'1' WHEN estado_3,
+							'1' WHEN estado_4,
+							'1' WHEN estado_5,
+							'1' WHEN estado_6,
+							'1' WHEN estado_7,
+							'0' WHEN OTHERS;
+	WITH state SELECT
+		ready	<=	'1' WHEN estado_5,
+					'0' WHEN OTHERS;
+							
 END comportamento;

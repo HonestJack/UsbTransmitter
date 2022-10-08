@@ -1,0 +1,37 @@
+|Controller
+clk => state~10.DATAIN
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+enableOut => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => state.OUTPUTSELECT
+valid => process_0.IN0
+valid => process_0.IN0
+loadShift => process_0.IN1
+loadShift => process_0.IN1
+stuffing => Selector7.IN5
+stuffing => process_0.IN1
+stuffing => process_0.IN1
+stuffing => Selector8.IN3
+resetIn => state~12.DATAIN
+enablePiso <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+enableStuffer <= WideNor2.DB_MAX_OUTPUT_PORT_TYPE
+enableNrzi <= WideNor3.DB_MAX_OUTPUT_PORT_TYPE
+resetOut <= resetOut.DB_MAX_OUTPUT_PORT_TYPE
+syncData <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+ready <= ready.DB_MAX_OUTPUT_PORT_TYPE
+
+
