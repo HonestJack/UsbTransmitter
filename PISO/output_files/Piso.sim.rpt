@@ -1,0 +1,248 @@
+Simulator report for Piso
+Sun Oct 09 19:58:51 2022
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 65 nodes     ;
+; Simulation Coverage         ;      65.63 % ;
+; Total Number of Transitions ; 892          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                        ;               ;
+; Vector input source                                                                        ; C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/PISO/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                         ; On            ;
+; Check outputs                                                                              ; Off                                                                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      65.63 % ;
+; Total nodes checked                                 ; 65           ;
+; Total output ports checked                          ; 64           ;
+; Total output ports with complete 1/0-value coverage ; 42           ;
+; Total output ports with no 1/0-value coverage       ; 22           ;
+; Total output ports with no 1-value coverage         ; 22           ;
+; Total output ports with no 0-value coverage         ; 22           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |Piso|dataOut~reg0   ; |Piso|dataOut~reg0   ; regout           ;
+; |Piso|dataOut~0      ; |Piso|dataOut~0      ; out              ;
+; |Piso|counter~4      ; |Piso|counter~4      ; out              ;
+; |Piso|counter~5      ; |Piso|counter~5      ; out              ;
+; |Piso|counter~6      ; |Piso|counter~6      ; out              ;
+; |Piso|counter~7      ; |Piso|counter~7      ; out              ;
+; |Piso|temp~0         ; |Piso|temp~0         ; out              ;
+; |Piso|temp~1         ; |Piso|temp~1         ; out              ;
+; |Piso|temp~2         ; |Piso|temp~2         ; out              ;
+; |Piso|temp~3         ; |Piso|temp~3         ; out              ;
+; |Piso|temp~4         ; |Piso|temp~4         ; out              ;
+; |Piso|temp~5         ; |Piso|temp~5         ; out              ;
+; |Piso|temp~6         ; |Piso|temp~6         ; out              ;
+; |Piso|dataOut~1      ; |Piso|dataOut~1      ; out              ;
+; |Piso|loadShift~0    ; |Piso|loadShift~0    ; out              ;
+; |Piso|loadShift~reg0 ; |Piso|loadShift~reg0 ; regout           ;
+; |Piso|counter[0]     ; |Piso|counter[0]     ; regout           ;
+; |Piso|counter[1]     ; |Piso|counter[1]     ; regout           ;
+; |Piso|counter[2]     ; |Piso|counter[2]     ; regout           ;
+; |Piso|counter[3]     ; |Piso|counter[3]     ; regout           ;
+; |Piso|\piso:temp[1]  ; |Piso|\piso:temp[1]  ; regout           ;
+; |Piso|\piso:temp[2]  ; |Piso|\piso:temp[2]  ; regout           ;
+; |Piso|\piso:temp[3]  ; |Piso|\piso:temp[3]  ; regout           ;
+; |Piso|\piso:temp[4]  ; |Piso|\piso:temp[4]  ; regout           ;
+; |Piso|\piso:temp[5]  ; |Piso|\piso:temp[5]  ; regout           ;
+; |Piso|\piso:temp[6]  ; |Piso|\piso:temp[6]  ; regout           ;
+; |Piso|\piso:temp[7]  ; |Piso|\piso:temp[7]  ; regout           ;
+; |Piso|clk            ; |Piso|clk            ; out              ;
+; |Piso|reset          ; |Piso|reset          ; out              ;
+; |Piso|enable         ; |Piso|enable         ; out              ;
+; |Piso|dataIn[1]      ; |Piso|dataIn[1]      ; out              ;
+; |Piso|dataIn[3]      ; |Piso|dataIn[3]      ; out              ;
+; |Piso|dataIn[4]      ; |Piso|dataIn[4]      ; out              ;
+; |Piso|dataIn[7]      ; |Piso|dataIn[7]      ; out              ;
+; |Piso|loadShift      ; |Piso|loadShift      ; pin_out          ;
+; |Piso|dataOut        ; |Piso|dataOut        ; pin_out          ;
+; |Piso|Add0~0         ; |Piso|Add0~0         ; out0             ;
+; |Piso|Add0~1         ; |Piso|Add0~1         ; out0             ;
+; |Piso|Add0~2         ; |Piso|Add0~2         ; out0             ;
+; |Piso|Add0~3         ; |Piso|Add0~3         ; out0             ;
+; |Piso|Add0~4         ; |Piso|Add0~4         ; out0             ;
+; |Piso|Equal0~0       ; |Piso|Equal0~0       ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------+
+; Missing 1-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |Piso|counter~0     ; |Piso|counter~0     ; out              ;
+; |Piso|counter~1     ; |Piso|counter~1     ; out              ;
+; |Piso|counter~2     ; |Piso|counter~2     ; out              ;
+; |Piso|counter~3     ; |Piso|counter~3     ; out              ;
+; |Piso|temp~7        ; |Piso|temp~7        ; out              ;
+; |Piso|counter[4]    ; |Piso|counter[4]    ; regout           ;
+; |Piso|counter[5]    ; |Piso|counter[5]    ; regout           ;
+; |Piso|counter[6]    ; |Piso|counter[6]    ; regout           ;
+; |Piso|counter[7]    ; |Piso|counter[7]    ; regout           ;
+; |Piso|\piso:temp[0] ; |Piso|\piso:temp[0] ; regout           ;
+; |Piso|dataIn[0]     ; |Piso|dataIn[0]     ; out              ;
+; |Piso|dataIn[2]     ; |Piso|dataIn[2]     ; out              ;
+; |Piso|dataIn[5]     ; |Piso|dataIn[5]     ; out              ;
+; |Piso|dataIn[6]     ; |Piso|dataIn[6]     ; out              ;
+; |Piso|Add0~5        ; |Piso|Add0~5        ; out0             ;
+; |Piso|Add0~6        ; |Piso|Add0~6        ; out0             ;
+; |Piso|Add0~7        ; |Piso|Add0~7        ; out0             ;
+; |Piso|Add0~8        ; |Piso|Add0~8        ; out0             ;
+; |Piso|Add0~9        ; |Piso|Add0~9        ; out0             ;
+; |Piso|Add0~10       ; |Piso|Add0~10       ; out0             ;
+; |Piso|Add0~11       ; |Piso|Add0~11       ; out0             ;
+; |Piso|Add0~12       ; |Piso|Add0~12       ; out0             ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |Piso|counter~0     ; |Piso|counter~0     ; out              ;
+; |Piso|counter~1     ; |Piso|counter~1     ; out              ;
+; |Piso|counter~2     ; |Piso|counter~2     ; out              ;
+; |Piso|counter~3     ; |Piso|counter~3     ; out              ;
+; |Piso|temp~7        ; |Piso|temp~7        ; out              ;
+; |Piso|counter[4]    ; |Piso|counter[4]    ; regout           ;
+; |Piso|counter[5]    ; |Piso|counter[5]    ; regout           ;
+; |Piso|counter[6]    ; |Piso|counter[6]    ; regout           ;
+; |Piso|counter[7]    ; |Piso|counter[7]    ; regout           ;
+; |Piso|\piso:temp[0] ; |Piso|\piso:temp[0] ; regout           ;
+; |Piso|dataIn[0]     ; |Piso|dataIn[0]     ; out              ;
+; |Piso|dataIn[2]     ; |Piso|dataIn[2]     ; out              ;
+; |Piso|dataIn[5]     ; |Piso|dataIn[5]     ; out              ;
+; |Piso|dataIn[6]     ; |Piso|dataIn[6]     ; out              ;
+; |Piso|Add0~5        ; |Piso|Add0~5        ; out0             ;
+; |Piso|Add0~6        ; |Piso|Add0~6        ; out0             ;
+; |Piso|Add0~7        ; |Piso|Add0~7        ; out0             ;
+; |Piso|Add0~8        ; |Piso|Add0~8        ; out0             ;
+; |Piso|Add0~9        ; |Piso|Add0~9        ; out0             ;
+; |Piso|Add0~10       ; |Piso|Add0~10       ; out0             ;
+; |Piso|Add0~11       ; |Piso|Add0~11       ; out0             ;
+; |Piso|Add0~12       ; |Piso|Add0~12       ; out0             ;
++---------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Oct 09 19:58:50 2022
+Info: Command: quartus_sim --simulation_results_format=VWF Piso -c Piso
+Info (324025): Using vector source file "C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/PISO/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      65.63 %
+Info (328052): Number of transitions in simulation is 892
+Info (324045): Vector file Piso.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4455 megabytes
+    Info: Processing ended: Sun Oct 09 19:58:51 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

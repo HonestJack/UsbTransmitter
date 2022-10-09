@@ -1,0 +1,32 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity parallel_in_serial_out is
+     port(
+         clk : in STD_LOGIC;
+         reset : in STD_LOGIC;
+         load : in STD_LOGIC;
+         dataIn : in STD_LOGIC_VECTOR(7 downto 0);
+         dataOut : out STD_LOGIC
+         );
+end parallel_in_serial_out;
+
+
+architecture piso_arc of parallel_in_serial_out is
+begin
+
+    piso : process (clk, reset, load, dataIn) is
+    variable temp : std_logic_vector (7 downto 0);
+    begin
+        if (reset='1') then
+            temp := (others=>'0');
+        elsif (load='1') then
+            temp := dataIn ;
+        elsif (rising_edge (clk)) then
+            dataOut <= temp(3);
+            temp := temp(2 downto 0) & '0';
+        end if;
+    end process piso;
+
+end piso_arc;
