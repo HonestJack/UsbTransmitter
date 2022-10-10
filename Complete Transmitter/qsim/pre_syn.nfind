@@ -9,7 +9,11 @@ dataIn[4],input,user_entered
 dataIn[5],input,user_entered
 dataIn[6],input,user_entered
 dataIn[7],input,user_entered
+enableNrzi,output,user_entered
 enableOut,output,user_entered
+enablePiso,output,user_entered
+enableStuffer,output,user_entered
+loadShift,output,user_entered
 OutMinus,output,user_entered
 outNrzi,output,user_entered
 outPiso,output,user_entered
@@ -17,6 +21,8 @@ outPlus,output,user_entered
 outStuffer,output,user_entered
 ready,output,user_entered
 reset,input,user_entered
+resetOut,output,user_entered
+stuffing,output,user_entered
 sync,bus,user_entered
 sync[0],input,user_entered
 sync[1],input,user_entered

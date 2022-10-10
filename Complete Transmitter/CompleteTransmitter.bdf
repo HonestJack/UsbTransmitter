@@ -55,7 +55,7 @@ applicable agreement for further details.
 	(input)
 	(rect -64 24 104 40)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "clk" (rect 5 0 20 12)(font "Arial" ))
+	(text "clk" (rect 5 0 19 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,7 +71,7 @@ applicable agreement for further details.
 	(input)
 	(rect -216 160 -48 176)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "dataIn[7..0]" (rect 5 0 62 12)(font "Arial" ))
+	(text "dataIn[7..0]" (rect 5 0 61 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -87,7 +87,7 @@ applicable agreement for further details.
 	(input)
 	(rect -216 192 -48 208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "sync[7..0]" (rect 5 0 56 12)(font "Arial" ))
+	(text "sync[7..0]" (rect 5 0 55 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -151,7 +151,7 @@ applicable agreement for further details.
 	(output)
 	(rect 184 56 360 72)
 	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
-	(text "outPiso" (rect 5 3 42 15)(font "Arial" ))
+	(text "outPiso" (rect 5 3 41 15)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -168,7 +168,7 @@ applicable agreement for further details.
 	(output)
 	(rect 408 56 584 72)
 	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
-	(text "outStuffer" (rect 5 3 56 15)(font "Arial" ))
+	(text "outStuffer" (rect 5 3 55 15)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -185,7 +185,7 @@ applicable agreement for further details.
 	(output)
 	(rect 632 56 808 72)
 	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
-	(text "outNrzi" (rect 5 3 40 15)(font "Arial" ))
+	(text "outNrzi" (rect 5 3 39 15)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 176 8)(pt 124 8))
@@ -213,6 +213,104 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+)
+(pin
+	(output)
+	(rect 840 424 1016 440)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "resetOut" (rect 90 0 132 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 744 408 920 424)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "enableNrzi" (rect 90 0 140 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 736 368 912 384)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "enableStuffer" (rect 90 0 157 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 728 352 904 368)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "enablePiso" (rect 90 0 143 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 176 392 352 408)
+	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
+	(text "loadShift" (rect 5 4 49 16)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 4)(pt 124 12))
+		(line (pt 98 12)(pt 94 8))
+		(line (pt 94 8)(pt 98 4))
+		(line (pt 98 4)(pt 94 8))
+	)
+	(rotate180)
+)
+(pin
+	(output)
+	(rect 288 440 464 456)
+	(text "OUTPUT" (rect 137 6 175 16)(font "Arial" (font_size 6)))
+	(text "stuffing" (rect 5 4 44 16)(font "Arial" ))
+	(pt 176 8)
+	(drawing
+		(line (pt 176 8)(pt 124 8))
+		(line (pt 124 12)(pt 98 12))
+		(line (pt 124 4)(pt 98 4))
+		(line (pt 124 4)(pt 124 12))
+		(line (pt 98 12)(pt 94 8))
+		(line (pt 94 8)(pt 98 4))
+		(line (pt 98 4)(pt 94 8))
+	)
+	(rotate180)
 )
 (symbol
 	(rect 168 88 344 232)
@@ -630,16 +728,8 @@ applicable agreement for further details.
 	(pt 720 384)
 )
 (connector
-	(pt 736 232)
-	(pt 736 400)
-)
-(connector
 	(pt 736 400)
 	(pt 720 400)
-)
-(connector
-	(pt 744 416)
-	(pt 720 416)
 )
 (connector
 	(pt 464 448)
@@ -666,10 +756,6 @@ applicable agreement for further details.
 	(pt 608 208)
 )
 (connector
-	(pt 744 416)
-	(pt 744 208)
-)
-(connector
 	(pt 232 416)
 	(pt 528 416)
 )
@@ -684,10 +770,6 @@ applicable agreement for further details.
 (connector
 	(pt 344 120)
 	(pt 352 120)
-)
-(connector
-	(pt 352 120)
-	(pt 352 432)
 )
 (connector
 	(pt 528 432)
@@ -793,14 +875,6 @@ applicable agreement for further details.
 	(pt 832 152)
 )
 (connector
-	(pt 608 208)
-	(pt 744 208)
-)
-(connector
-	(pt 744 208)
-	(pt 832 208)
-)
-(connector
 	(pt 832 152)
 	(pt 848 152)
 )
@@ -889,10 +963,6 @@ applicable agreement for further details.
 	(pt 144 336)
 )
 (connector
-	(pt 728 384)
-	(pt 728 336)
-)
-(connector
 	(pt 840 432)
 	(pt 720 432)
 )
@@ -912,6 +982,46 @@ applicable agreement for further details.
 	(pt 1040 152)
 	(pt 1056 152)
 )
+(connector
+	(pt 736 232)
+	(pt 736 376)
+)
+(connector
+	(pt 736 376)
+	(pt 736 400)
+)
+(connector
+	(pt 720 416)
+	(pt 744 416)
+)
+(connector
+	(pt 608 208)
+	(pt 744 208)
+)
+(connector
+	(pt 744 208)
+	(pt 832 208)
+)
+(connector
+	(pt 744 208)
+	(pt 744 416)
+)
+(connector
+	(pt 728 384)
+	(pt 728 360)
+)
+(connector
+	(pt 728 360)
+	(pt 728 336)
+)
+(connector
+	(pt 352 120)
+	(pt 352 400)
+)
+(connector
+	(pt 352 400)
+	(pt 352 432)
+)
 (junction (pt 464 240))
 (junction (pt 360 136))
 (junction (pt 584 120))
@@ -925,3 +1035,6 @@ applicable agreement for further details.
 (junction (pt 128 32))
 (junction (pt 840 256))
 (junction (pt 1040 152))
+(junction (pt 736 376))
+(junction (pt 728 360))
+(junction (pt 352 400))

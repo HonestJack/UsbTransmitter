@@ -29,6 +29,12 @@ outPiso <= Piso:inst.dataOut
 outStuffer <= BitStuffer:inst2.dataOut
 outNrzi <= NrziDecoder:inst3.dataOut
 enableOut <= DiffEncoder:inst4.enableOut
+resetOut <= Controller:inst5.resetOut
+enableNrzi <= Controller:inst5.enableNrzi
+enableStuffer <= Controller:inst5.enableStuffer
+enablePiso <= Controller:inst5.enablePiso
+loadShift <= Piso:inst.loadShift
+stuffing <= BitStuffer:inst2.stopPiso
 
 
 |CompleteTransmitter|DiffEncoder:inst4
