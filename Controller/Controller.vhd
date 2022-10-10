@@ -1,18 +1,18 @@
 ENTITY Controller IS
 	PORT(
-		clk	 			: IN	BIT;
-		enableOut		: IN	BIT;  -- OE_i
-		valid				: IN	BIT;  -- Valid_i
-		loadShift		: IN	BIT;  -- LS_i
-		stuffing			: IN	BIT;  -- ST_i
-		resetIn			: IN	BIT;  -- rst_i
+		clk	 			: IN	STD_Logic;
+		enableOut		: IN	STD_Logic;  -- OE_i
+		valid				: IN	STD_Logic;  -- Valid_i
+		loadShift		: IN	STD_Logic;  -- LS_i
+		stuffing			: IN	STD_Logic;  -- ST_i
+		resetIn			: IN	STD_Logic;  -- rst_i
 		
-		enablePiso  	: OUT	BIT;  -- E1_o
-		enableStuffer 	: OUT	BIT;  -- E2_o
-		enableNrzi  	: OUT	BIT;  -- E3_o
-		resetOut		  	: OUT	BIT;  -- R_o
-		syncData		  	: OUT	BIT;  -- SD_o
-		ready		 		: OUT	BIT); -- Ready_o
+		enablePiso  	: OUT	STD_Logic;  -- E1_o
+		enableStuffer 	: OUT	STD_Logic;  -- E2_o
+		enableNrzi  	: OUT	STD_Logic;  -- E3_o
+		resetOut		  	: OUT	STD_Logic;  -- R_o
+		syncData		  	: OUT	STD_Logic;  -- SD_o
+		ready		 		: OUT	STD_Logic); -- Ready_o
 END Controller;
 
 ARCHITECTURE comportamento OF Controller IS

@@ -3,11 +3,11 @@ USE ieee.std_logic_1164.all;
 
 ENTITY NrziDecoder IS
 	PORT(
-		clk	   	: IN	BIT;
-		dataIn		: IN	BIT;
-		enable		: IN	BIT;
-		reset			: IN	BIT;
-		dataOut	  	: OUT	BIT);
+		clk	   	: IN	STD_Logic;
+		dataIn		: IN	STD_Logic;
+		enable		: IN	STD_Logic;
+		reset			: IN	STD_Logic;
+		dataOut	  	: OUT	STD_Logic);
 END NrziDecoder;
 
 ARCHITECTURE comportamento OF NrziDecoder IS

@@ -1,12 +1,15 @@
+LIBRARY ieee; 						-- declara a biblioteca IEEE
+USE ieee.std_logic_1164.all; 	-- declara o uso do pacote std_logic_1164 da biblioteca IEEE
+
 ENTITY DiffEncoder IS
 	PORT(
-		clk	 			: IN	BIT;
-		dataIn			: IN	BIT;
-		enableIn			: IN	BIT;
-		reset				: IN	BIT;
-		dataOutPlus		: OUT	BIT;
-		dataOutMinus  	: OUT	BIT;
-		enableOut 		: OUT	BIT);
+		clk	 			: IN	STD_Logic;
+		dataIn			: IN	STD_Logic;
+		enableIn			: IN	STD_Logic;
+		reset				: IN	STD_Logic;
+		dataOutPlus		: OUT	STD_Logic;
+		dataOutMinus  	: OUT	STD_Logic;
+		enableOut 		: OUT	STD_Logic);
 END DiffEncoder;
 
 ARCHITECTURE comportamento OF DiffEncoder IS

@@ -1,0 +1,12 @@
+NrziDecoder
+clk,input,user_entered
+dataIn,input,user_entered
+dataOut,output,user_entered
+enable,input,user_entered
+reset,input,user_entered
+state,reg,user_entered
+state~0,comb,compiler_generated
+~ASDO~,input,compiler_generated
+~LVDS41p/nCEO~,output,compiler_generated
+~nCSO~,input,compiler_generated
+,hierarchy,user_entered

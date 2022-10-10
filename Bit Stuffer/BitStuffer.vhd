@@ -1,11 +1,14 @@
+LIBRARY ieee; 						-- declara a biblioteca IEEE
+USE ieee.std_logic_1164.all; 	-- declara o uso do pacote std_logic_1164 da biblioteca IEEE
+
 ENTITY BitStuffer IS
 	PORT(
-		clk	   	: IN	BIT;
-		dataIn		: IN	BIT;
-		enable		: IN	BIT;
-		reset			: IN	BIT;
-		dataOut	  	: OUT	BIT;
-		stopPiso	  	: OUT	BIT);
+		clk	   	: IN	STD_Logic;
+		dataIn		: IN	STD_Logic;
+		enable		: IN	STD_Logic;
+		reset			: IN	STD_Logic;
+		dataOut	  	: OUT	STD_Logic;
+		stopPiso	  	: OUT	STD_Logic);
 END BitStuffer;
 
 ARCHITECTURE comportamento OF BitStuffer IS
