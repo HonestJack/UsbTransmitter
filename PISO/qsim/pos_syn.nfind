@@ -56,6 +56,7 @@ loadShift~0,comb,compiler_generated
 loadShift~1,comb,compiler_generated
 loadShift~reg0,reg,compiler_generated
 reset,input,user_entered
+stuffing,input,user_entered
 temp~0,comb,compiler_generated
 temp~1,comb,compiler_generated
 temp~2,comb,compiler_generated

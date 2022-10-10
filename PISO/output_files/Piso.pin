@@ -59,7 +59,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 CHIP  "Piso"  ASSIGNED TO AN: EP2C5T144C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -84,18 +84,18 @@ clk                          : 17        : input  : 3.3-V LVTTL       :         
 reset                        : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
-dataIn[7]                    : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[6]                    : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
+stuffing                     : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[7]                    : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-enable                       : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[0]                    : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
-loadShift                    : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-dataIn[2]                    : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[5]                    : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[4]                    : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[1]                    : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[2]                    : 26        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[5]                    : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
+enable                       : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-dataIn[1]                    : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[3]                    : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[4]                    : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
+loadShift                    : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+dataIn[6]                    : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[3]                    : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,9 +103,9 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-GND*                         : 40        :        :                   :         : 4         :                
-GND*                         : 41        :        :                   :         : 4         :                
-load                         : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataIn[0]                    : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataOut                      : 41        : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 42        :        :                   :         : 4         :                
 GND*                         : 43        :        :                   :         : 4         :                
 GND*                         : 44        :        :                   :         : 4         :                
 GND*                         : 45        :        :                   :         : 4         :                
@@ -189,7 +189,7 @@ GND*                         : 122       :        :                   :         
 GND                          : 123       : gnd    :                   :         :           :                
 VCCINT                       : 124       : power  :                   : 1.2V    :           :                
 GND*                         : 125       :        :                   :         : 2         :                
-GND*                         : 126       :        :                   :         : 2         :                
+load                         : 126       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 127       : power  :                   : 3.3V    : 2         :                
 GND                          : 128       : gnd    :                   :         :           :                
 GND*                         : 129       :        :                   :         : 2         :                
@@ -205,6 +205,6 @@ VCCIO2                       : 138       : power  :                   : 3.3V    
 GND*                         : 139       :        :                   :         : 2         :                
 GND                          : 140       : gnd    :                   :         :           :                
 GND*                         : 141       :        :                   :         : 2         :                
-dataOut                      : 142       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 142       :        :                   :         : 2         :                
 GND*                         : 143       :        :                   :         : 2         :                
 GND*                         : 144       :        :                   :         : 2         :                

@@ -36,5 +36,6 @@ load,input,user_entered
 loadShift,output,user_entered
 loadShift~reg0,reg,compiler_generated
 reset,input,user_entered
+stuffing,input,user_entered
 temp,comb,user_entered
 ,hierarchy,user_entered

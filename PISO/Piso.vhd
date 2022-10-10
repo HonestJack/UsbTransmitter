@@ -7,7 +7,6 @@ entity Piso is
          clk : in STD_LOGIC;
          reset : in STD_LOGIC;
 			enable : in STD_LOGIC;
-         load : in STD_LOGIC;
 			stuffing : in STD_LOGIC;
          dataIn : in STD_LOGIC_VECTOR(7 downto 0);
 			loadShift: out STD_LOGIC;
@@ -18,6 +17,8 @@ end Piso;
 
 architecture piso_arc of Piso is
 	SIGNAL counter : Integer range 0 to 255;
+	attribute keep: boolean;
+	attribute keep of counter: signal is true;
 begin
 
     piso : process (clk, reset, enable, load, stuffing, dataIn) is

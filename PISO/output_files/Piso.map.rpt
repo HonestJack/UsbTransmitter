@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Piso
-Sun Oct 09 19:56:10 2022
-Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+Sun Oct 09 21:14:47 2022
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,9 +13,11 @@ Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  8. Registers Protected by Synthesis
+  9. General Register Statistics
+ 10. Source assignments for Top-level Entity: |Piso
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +43,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 09 19:56:10 2022         ;
-; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 09 21:14:47 2022         ;
+; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Piso                                          ;
 ; Top-level Entity Name              ; Piso                                          ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 24                                            ;
-;     Total combinational functions  ; 24                                            ;
+; Total logic elements               ; 25                                            ;
+;     Total combinational functions  ; 25                                            ;
 ;     Dedicated logic registers      ; 18                                            ;
 ; Total registers                    ; 18                                            ;
-; Total pins                         ; 14                                            ;
+; Total pins                         ; 15                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
 ; Embedded Multiplier 9-bit elements ; 0                                             ;
@@ -173,27 +175,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 24    ;
+; Estimated Total logic elements              ; 25    ;
 ;                                             ;       ;
-; Total combinational functions               ; 24    ;
+; Total combinational functions               ; 25    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 11    ;
-;     -- 3 input functions                    ; 4     ;
+;     -- 4 input functions                    ; 10    ;
+;     -- 3 input functions                    ; 6     ;
 ;     -- <=2 input functions                  ; 9     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 17    ;
+;     -- normal mode                          ; 18    ;
 ;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
 ; Total registers                             ; 18    ;
 ;     -- Dedicated logic registers            ; 18    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 14    ;
+; I/O pins                                    ; 15    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out                             ; 18    ;
-; Total fan-out                               ; 143   ;
-; Average fan-out                             ; 2.55  ;
+; Total fan-out                               ; 145   ;
+; Average fan-out                             ; 2.50  ;
 +---------------------------------------------+-------+
 
 
@@ -202,9 +204,25 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Piso                      ; 24 (24)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Piso               ;              ;
+; |Piso                      ; 25 (25)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |Piso               ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                              ;
++---------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++---------------+------------------------------------------------------------------+--------------------------------------------+
+; counter[0]    ; yes                                                              ; yes                                        ;
+; counter[1]    ; yes                                                              ; yes                                        ;
+; counter[2]    ; yes                                                              ; yes                                        ;
+; counter[3]    ; yes                                                              ; yes                                        ;
+; counter[4]    ; yes                                                              ; yes                                        ;
+; counter[5]    ; yes                                                              ; yes                                        ;
+; counter[6]    ; yes                                                              ; yes                                        ;
+; counter[7]    ; yes                                                              ; yes                                        ;
++---------------+------------------------------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -222,6 +240,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------+
+; Source assignments for Top-level Entity: |Piso ;
++-------------------+-------+------+-------------+
+; Assignment        ; Value ; From ; To          ;
++-------------------+-------+------+-------------+
+; PRESERVE_REGISTER ; on    ; -    ; counter[7]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[6]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[5]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[4]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[3]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[2]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[1]  ;
+; PRESERVE_REGISTER ; on    ; -    ; counter[0]  ;
++-------------------+-------+------+-------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -235,9 +269,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 09 19:56:08 2022
+    Info: Processing started: Sun Oct 09 21:14:45 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Piso -c Piso
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file piso.vhd
@@ -248,13 +282,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "load"
-Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Info (21057): Implemented 40 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 24 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4634 megabytes
-    Info: Processing ended: Sun Oct 09 19:56:10 2022
+    Info (21061): Implemented 25 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Sun Oct 09 21:14:47 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
