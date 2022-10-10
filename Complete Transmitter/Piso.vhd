@@ -29,14 +29,14 @@ begin
 			counter <= 0;			
 		elsif clk'event AND clk = '1' AND enable = '1' then
 			if stuffing = '0' then
-				if (counter=8) then
+				dataOut <= temp(7);
+				if (counter=7) then
 					counter <= 0;
 					loadShift <= '1';
 					temp := dataIn ;
 				else
 					counter <= counter + 1;
 					loadShift <= '0';
-					dataOut <= temp(7);
 					temp := temp(6 downto 0) & '0';
 				end if;
 			end if;

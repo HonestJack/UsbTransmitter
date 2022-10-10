@@ -70,8 +70,8 @@ GND*                         : 3         :        :                   :         
 GND*                         : 4         :        :                   :         : 1         :                
 VCCIO1                       : 5         : power  :                   : 3.3V    : 1         :                
 GND                          : 6         : gnd    :                   :         :           :                
-sync[1]                      : 7         : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : 8         :        :                   :         : 1         :                
+sync[7]                      : 7         : input  : 3.3-V LVTTL       :         : 1         : N              
+valid                        : 8         : input  : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 9         :        :                   :         : 1         :                
 TDO                          : 10        : output :                   :         : 1         :                
 TMS                          : 11        : input  :                   :         : 1         :                
@@ -87,15 +87,15 @@ nCONFIG                      : 20        :        :                   :         
 GND+                         : 21        :        :                   :         : 1         :                
 GND+                         : 22        :        :                   :         : 1         :                
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-outPiso                      : 24        : output : 3.3-V LVTTL       :         : 1         : N              
-dataIn[1]                    : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
-stuffing                     : 26        : output : 3.3-V LVTTL       :         : 1         : N              
-enableOut                    : 27        : output : 3.3-V LVTTL       :         : 1         : N              
-dataIn[0]                    : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[0]                    : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
+sync[0]                      : 25        : input  : 3.3-V LVTTL       :         : 1         : N              
+ready                        : 26        : output : 3.3-V LVTTL       :         : 1         : N              
+enablePiso                   : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+outStuffer                   : 28        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-dataIn[7]                    : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[2]                    : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
-sync[2]                      : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
+enableNrzi                   : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+outPiso                      : 31        : output : 3.3-V LVTTL       :         : 1         : N              
+stuffing                     : 32        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,27 +103,27 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-dataIn[6]                    : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
-dataIn[5]                    : 41        : input  : 3.3-V LVTTL       :         : 4         : N              
+OutMinus                     : 40        : output : 3.3-V LVTTL       :         : 4         : N              
+outPlus                      : 41        : output : 3.3-V LVTTL       :         : 4         : N              
 enableStuffer                : 42        : output : 3.3-V LVTTL       :         : 4         : N              
-sync[5]                      : 43        : input  : 3.3-V LVTTL       :         : 4         : N              
-sync[0]                      : 44        : input  : 3.3-V LVTTL       :         : 4         : N              
-enablePiso                   : 45        : output : 3.3-V LVTTL       :         : 4         : N              
+outNrzi                      : 43        : output : 3.3-V LVTTL       :         : 4         : N              
+resetOut                     : 44        : output : 3.3-V LVTTL       :         : 4         : N              
+enableOut                    : 45        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                
-resetOut                     : 47        : output : 3.3-V LVTTL       :         : 4         : N              
-sync[6]                      : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataIn[5]                    : 47        : input  : 3.3-V LVTTL       :         : 4         : N              
+sync[5]                      : 48        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 49        : gnd    :                   :         :           :                
 VCCINT                       : 50        : power  :                   : 1.2V    :           :                
-valid                        : 51        : input  : 3.3-V LVTTL       :         : 4         : N              
-sync[7]                      : 52        : input  : 3.3-V LVTTL       :         : 4         : N              
-enableNrzi                   : 53        : output : 3.3-V LVTTL       :         : 4         : N              
+loadShift                    : 51        : output : 3.3-V LVTTL       :         : 4         : N              
+dataIn[7]                    : 52        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataIn[2]                    : 53        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 54        : power  :                   : 3.3V    : 4         :                
-OutMinus                     : 55        : output : 3.3-V LVTTL       :         : 4         : N              
+sync[6]                      : 55        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 56        : gnd    :                   :         :           :                
-outStuffer                   : 57        : output : 3.3-V LVTTL       :         : 4         : N              
-outPlus                      : 58        : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 59        :        :                   :         : 4         :                
-GND*                         : 60        :        :                   :         : 4         :                
+dataIn[6]                    : 57        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataIn[1]                    : 58        : input  : 3.3-V LVTTL       :         : 4         : N              
+sync[2]                      : 59        : input  : 3.3-V LVTTL       :         : 4         : N              
+sync[1]                      : 60        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 61        : gnd    :                   :         :           :                
 VCCINT                       : 62        : power  :                   : 1.2V    :           :                
 GND*                         : 63        :        :                   :         : 4         :                
@@ -195,9 +195,9 @@ GND                          : 128       : gnd    :                   :         
 GND*                         : 129       :        :                   :         : 2         :                
 GND                          : 130       : gnd    :                   :         :           :                
 VCCINT                       : 131       : power  :                   : 1.2V    :           :                
-outNrzi                      : 132       : output : 3.3-V LVTTL       :         : 2         : N              
-ready                        : 133       : output : 3.3-V LVTTL       :         : 2         : N              
-loadShift                    : 134       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 132       :        :                   :         : 2         :                
+GND*                         : 133       :        :                   :         : 2         :                
+GND*                         : 134       :        :                   :         : 2         :                
 GND*                         : 135       :        :                   :         : 2         :                
 GND*                         : 136       :        :                   :         : 2         :                
 GND*                         : 137       :        :                   :         : 2         :                

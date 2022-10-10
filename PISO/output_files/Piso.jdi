@@ -3,7 +3,7 @@
     <hash md5_digest_80b="00000000000000000000"/>
   </project>
   <file_info>
-    <file checksum="0x000767FF" device="EP2C5T144C6" path="Piso.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x07529351" device="EPCS4" path="Piso.pof" usercode="0x00000000"/>
+    <file checksum="0x00075EC3" device="EP2C5T144C6" path="Piso.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x0752A1E6" device="EPCS4" path="Piso.pof" usercode="0x00000000"/>
   </file_info>
 </sld_project_info>

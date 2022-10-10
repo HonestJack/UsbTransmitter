@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Piso
-Sun Oct 09 23:40:40 2022
+Mon Oct 10 20:11:18 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 09 23:40:40 2022         ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 10 20:11:18 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Piso                                          ;
 ; Top-level Entity Name              ; Piso                                          ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 25                                            ;
-;     Total combinational functions  ; 25                                            ;
+; Total logic elements               ; 23                                            ;
+;     Total combinational functions  ; 22                                            ;
 ;     Dedicated logic registers      ; 18                                            ;
 ; Total registers                    ; 18                                            ;
 ; Total pins                         ; 14                                            ;
@@ -175,16 +175,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 25    ;
+; Estimated Total logic elements              ; 23    ;
 ;                                             ;       ;
-; Total combinational functions               ; 25    ;
+; Total combinational functions               ; 22    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 10    ;
-;     -- 3 input functions                    ; 6     ;
-;     -- <=2 input functions                  ; 9     ;
+;     -- 4 input functions                    ; 9     ;
+;     -- 3 input functions                    ; 3     ;
+;     -- <=2 input functions                  ; 10    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 18    ;
+;     -- normal mode                          ; 15    ;
 ;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
 ; Total registers                             ; 18    ;
@@ -194,8 +194,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 14    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out                             ; 18    ;
-; Total fan-out                               ; 145   ;
-; Average fan-out                             ; 2.54  ;
+; Total fan-out                               ; 136   ;
+; Average fan-out                             ; 2.52  ;
 +---------------------------------------------+-------+
 
 
@@ -204,7 +204,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Piso                      ; 25 (25)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Piso               ;              ;
+; |Piso                      ; 22 (22)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |Piso               ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -235,7 +235,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -271,7 +271,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 09 23:40:38 2022
+    Info: Processing started: Mon Oct 10 20:11:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Piso -c Piso
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file piso.vhd
@@ -280,14 +280,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file piso.vh
 Info (12127): Elaborating entity "Piso" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 37 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 25 logic cells
+    Info (21061): Implemented 23 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 390 megabytes
-    Info: Processing ended: Sun Oct 09 23:40:40 2022
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Mon Oct 10 20:11:18 2022
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
 
