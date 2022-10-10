@@ -1,0 +1,31 @@
+
+State Machine - |CompleteTransmitter|Controller:inst5|state
+Name state.estado_8 state.estado_7 state.estado_6 state.estado_5 state.estado_4 state.estado_3 state.estado_2 state.estado_1 state.estado_0 
+state.estado_0 0 0 0 0 0 0 0 0 0 
+state.estado_1 0 0 0 0 0 0 0 1 1 
+state.estado_2 0 0 0 0 0 0 1 0 1 
+state.estado_3 0 0 0 0 0 1 0 0 1 
+state.estado_4 0 0 0 0 1 0 0 0 1 
+state.estado_5 0 0 0 1 0 0 0 0 1 
+state.estado_6 0 0 1 0 0 0 0 0 1 
+state.estado_7 0 1 0 0 0 0 0 0 1 
+state.estado_8 1 0 0 0 0 0 0 0 1 
+
+State Machine - |CompleteTransmitter|BitStuffer:inst2|state
+Name state.estado_6 state.estado_5 state.estado_4 state.estado_3 state.estado_2 state.estado_1 state.estado_0 
+state.estado_0 0 0 0 0 0 0 0 
+state.estado_1 0 0 0 0 0 1 1 
+state.estado_2 0 0 0 0 1 0 1 
+state.estado_3 0 0 0 1 0 0 1 
+state.estado_4 0 0 1 0 0 0 1 
+state.estado_5 0 1 0 0 0 0 1 
+state.estado_6 1 0 0 0 0 0 1 
+
+State Machine - |CompleteTransmitter|DiffEncoder:inst4|state
+Name state.estado_5 state.estado_4 state.estado_3 state.estado_2 state.estado_1 state.estado_0 
+state.estado_0 0 0 0 0 0 0 
+state.estado_1 0 0 0 0 1 1 
+state.estado_2 0 0 0 1 0 1 
+state.estado_3 0 0 1 0 0 1 
+state.estado_4 0 1 0 0 0 1 
+state.estado_5 1 0 0 0 0 1 

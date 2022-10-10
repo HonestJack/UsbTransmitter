@@ -1,5 +1,5 @@
 Fitter report for Piso
-Sun Oct 09 21:14:50 2022
+Sun Oct 09 23:40:44 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                     ;
 +------------------------------------+-----------------------------------------------+
-; Fitter Status                      ; Successful - Sun Oct 09 21:14:50 2022         ;
+; Fitter Status                      ; Successful - Sun Oct 09 23:40:44 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Piso                                          ;
 ; Top-level Entity Name              ; Piso                                          ;
@@ -73,7 +73,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 25 / 4,608 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 18 / 4,608 ( < 1 % )                          ;
 ; Total registers                    ; 18                                            ;
-; Total pins                         ; 15 / 89 ( 17 % )                              ;
+; Total pins                         ; 14 / 89 ( 16 % )                              ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                ;
@@ -153,8 +153,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 64 ( 0.00 % )      ;
-;     -- Achieved     ; 0 / 64 ( 0.00 % )      ;
+;     -- Requested    ; 0 / 63 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 63 ( 0.00 % )      ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -177,7 +177,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 61      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 60      ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -214,7 +214,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ;                                             ;                      ;
 ; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )    ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 15 / 89 ( 17 % )     ;
+; I/O pins                                    ; 14 / 89 ( 16 % )     ;
 ;     -- Clock pins                           ; 2 / 4 ( 50 % )       ;
 ;                                             ;                      ;
 ; Global signals                              ; 2                    ;
@@ -232,7 +232,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; Maximum fan-out                             ; 18                   ;
 ; Highest non-global fan-out                  ; 16                   ;
 ; Total fan-out                               ; 147                  ;
-; Average fan-out                             ; 2.33                 ;
+; Average fan-out                             ; 2.37                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -266,7 +266,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; Total LABs:  partially or completely used   ; 2 / 288 ( < 1 % )   ; 0 / 288 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 15                  ; 0                              ;
+; I/O pins                                    ; 14                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )      ; 0 / 26 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -287,7 +287,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 13                  ; 0                              ;
+;     -- Input Ports                          ; 12                  ; 0                              ;
 ;     -- Output Ports                         ; 2                   ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
@@ -313,18 +313,17 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clk       ; 17    ; 1        ; 0            ; 6            ; 0           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[0] ; 40    ; 4        ; 1            ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[0] ; 32    ; 1        ; 0            ; 2            ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; dataIn[1] ; 25    ; 1        ; 0            ; 5            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[2] ; 26    ; 1        ; 0            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[3] ; 32    ; 1        ; 0            ; 2            ; 4           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[4] ; 24    ; 1        ; 0            ; 5            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[5] ; 27    ; 1        ; 0            ; 5            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[6] ; 31    ; 1        ; 0            ; 2            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; dataIn[7] ; 22    ; 1        ; 0            ; 6            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; enable    ; 28    ; 1        ; 0            ; 4            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; load      ; 126   ; 2        ; 14           ; 14           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[2] ; 27    ; 1        ; 0            ; 5            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[3] ; 28    ; 1        ; 0            ; 4            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[4] ; 31    ; 1        ; 0            ; 2            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[5] ; 26    ; 1        ; 0            ; 5            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[6] ; 22    ; 1        ; 0            ; 6            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dataIn[7] ; 21    ; 1        ; 0            ; 6            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; enable    ; 30    ; 1        ; 0            ; 2            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; reset     ; 18    ; 1        ; 0            ; 6            ; 1           ; 2                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; stuffing  ; 21    ; 1        ; 0            ; 6            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; stuffing  ; 24    ; 1        ; 0            ; 5            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -333,8 +332,8 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; dataOut   ; 41    ; 4        ; 1            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; loadShift ; 30    ; 1        ; 0            ; 2            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; dataOut   ; 40    ; 4        ; 1            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; loadShift ; 7     ; 1        ; 0            ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -343,10 +342,10 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 14 / 19 ( 74 % ) ; 3.3V          ; --           ;
-; 2        ; 1 / 23 ( 4 % )   ; 3.3V          ; --           ;
+; 1        ; 15 / 19 ( 79 % ) ; 3.3V          ; --           ;
+; 2        ; 0 / 23 ( 0 % )   ; 3.3V          ; --           ;
 ; 3        ; 1 / 23 ( 4 % )   ; 3.3V          ; --           ;
-; 4        ; 2 / 24 ( 8 % )   ; 3.3V          ; --           ;
+; 4        ; 1 / 24 ( 4 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -361,7 +360,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; 4        ; 3          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 5        ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 6        ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 7        ; 10         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 7        ; 10         ; 1        ; loadShift                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 8        ; 11         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 9        ; 12         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 10       ; 13         ; 1        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
@@ -375,18 +374,18 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; 18       ; 21         ; 1        ; reset                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 19       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 20       ; 22         ; 1        ; ^nCONFIG                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; 21       ; 23         ; 1        ; stuffing                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 22       ; 24         ; 1        ; dataIn[7]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 21       ; 23         ; 1        ; dataIn[7]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 22       ; 24         ; 1        ; dataIn[6]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 23       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 24       ; 25         ; 1        ; dataIn[4]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 24       ; 25         ; 1        ; stuffing                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 25       ; 26         ; 1        ; dataIn[1]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 26       ; 27         ; 1        ; dataIn[2]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 27       ; 28         ; 1        ; dataIn[5]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 28       ; 32         ; 1        ; enable                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 26       ; 27         ; 1        ; dataIn[5]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 27       ; 28         ; 1        ; dataIn[2]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 28       ; 32         ; 1        ; dataIn[3]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; 30       ; 40         ; 1        ; loadShift                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 31       ; 41         ; 1        ; dataIn[6]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 32       ; 42         ; 1        ; dataIn[3]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 30       ; 40         ; 1        ; enable                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 41         ; 1        ; dataIn[4]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ; 42         ; 1        ; dataIn[0]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 33       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 34       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 35       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -394,8 +393,8 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; 37       ;            ;          ; VCCA_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 38       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 39       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 40       ; 43         ; 4        ; dataIn[0]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 41       ; 44         ; 4        ; dataOut                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 40       ; 43         ; 4        ; dataOut                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 41       ; 44         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 42       ; 45         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 43       ; 46         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 44       ; 47         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -480,7 +479,7 @@ The pin-out file can be found in C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistem
 ; 123      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 124      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 125      ; 144        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 126      ; 145        ; 2        ; load                                     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 126      ; 145        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 127      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 128      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 129      ; 148        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -545,7 +544,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |Piso                      ; 25 (25)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 7 (7)        ; 0 (0)             ; 18 (18)          ; |Piso               ;              ;
+; |Piso                      ; 25 (25)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 14   ; 0            ; 7 (7)        ; 0 (0)             ; 18 (18)          ; |Piso               ;              ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -555,21 +554,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+---------------+-----------------------+-----+
 ; Name      ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +-----------+----------+---------------+---------------+-----------------------+-----+
-; load      ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; loadShift ; Output   ; --            ; --            ; --                    ; --  ;
 ; dataOut   ; Output   ; --            ; --            ; --                    ; --  ;
 ; enable    ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; reset     ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; stuffing  ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; stuffing  ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; clk       ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; dataIn[7] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; dataIn[6] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; dataIn[6] ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
 ; dataIn[5] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; dataIn[4] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; dataIn[3] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; dataIn[2] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; dataIn[1] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; dataIn[0] ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; dataIn[0] ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +-----------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -578,26 +576,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; load                ;                   ;         ;
 ; enable              ;                   ;         ;
 ;      - loadShift~0  ; 0                 ; 6       ;
 ;      - counter[0]~1 ; 0                 ; 6       ;
 ; reset               ;                   ;         ;
 ; stuffing            ;                   ;         ;
+;      - loadShift~0  ; 0                 ; 6       ;
+;      - counter[0]~1 ; 0                 ; 6       ;
 ; clk                 ;                   ;         ;
 ; dataIn[7]           ;                   ;         ;
 ; dataIn[6]           ;                   ;         ;
-;      - temp~1       ; 1                 ; 6       ;
 ; dataIn[5]           ;                   ;         ;
 ;      - temp~2       ; 0                 ; 6       ;
 ; dataIn[4]           ;                   ;         ;
 ;      - temp~3       ; 1                 ; 6       ;
 ; dataIn[3]           ;                   ;         ;
-;      - temp~4       ; 0                 ; 6       ;
+;      - temp~4       ; 1                 ; 6       ;
 ; dataIn[2]           ;                   ;         ;
 ;      - temp~5       ; 0                 ; 6       ;
 ; dataIn[1]           ;                   ;         ;
-;      - temp~6       ; 1                 ; 6       ;
+;      - temp~6       ; 0                 ; 6       ;
 ; dataIn[0]           ;                   ;         ;
 ;      - temp~7       ; 0                 ; 6       ;
 +---------------------+-------------------+---------+
@@ -609,7 +607,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name         ; Location         ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clk          ; PIN_17           ; 18      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; counter[0]~1 ; LCCOMB_X1_Y6_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; counter[0]~1 ; LCCOMB_X1_Y5_N30 ; 16      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; reset        ; PIN_18           ; 16      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
 +--------------+------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -698,14 +696,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 19 / 15,666 ( < 1 % ) ;
+; Block interconnects         ; 20 / 15,666 ( < 1 % ) ;
 ; C16 interconnects           ; 0 / 812 ( 0 % )       ;
 ; C4 interconnects            ; 11 / 11,424 ( < 1 % ) ;
-; Direct links                ; 6 / 15,666 ( < 1 % )  ;
+; Direct links                ; 7 / 15,666 ( < 1 % )  ;
 ; Global clocks               ; 2 / 8 ( 25 % )        ;
 ; Local interconnects         ; 21 / 4,608 ( < 1 % )  ;
 ; R24 interconnects           ; 0 / 652 ( 0 % )       ;
-; R4 interconnects            ; 1 / 13,328 ( < 1 % )  ;
+; R4 interconnects            ; 0 / 13,328 ( 0 % )    ;
 +-----------------------------+-----------------------+
 
 
@@ -723,12 +721,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
-; 10                                          ; 1                           ;
-; 11                                          ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
 ; 12                                          ; 0                           ;
 ; 13                                          ; 0                           ;
-; 14                                          ; 0                           ;
-; 15                                          ; 1                           ;
+; 14                                          ; 1                           ;
+; 15                                          ; 0                           ;
 ; 16                                          ; 0                           ;
 +---------------------------------------------+-----------------------------+
 
@@ -767,42 +765,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 15                                           ; 0                           ;
 ; 16                                           ; 0                           ;
 ; 17                                           ; 0                           ;
-; 18                                           ; 1                           ;
+; 18                                           ; 0                           ;
 ; 19                                           ; 0                           ;
-; 20                                           ; 0                           ;
+; 20                                           ; 1                           ;
 ; 21                                           ; 0                           ;
 ; 22                                           ; 0                           ;
-; 23                                           ; 0                           ;
-; 24                                           ; 0                           ;
-; 25                                           ; 1                           ;
+; 23                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 3.50) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
-; 4                                               ; 2                           ;
+; 3                                               ; 1                           ;
+; 4                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 10.50) ; Number of LABs  (Total = 2) ;
+; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 2) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
 ; 2                                            ; 0                           ;
 ; 3                                            ; 0                           ;
 ; 4                                            ; 0                           ;
-; 5                                            ; 0                           ;
-; 6                                            ; 1                           ;
+; 5                                            ; 1                           ;
+; 6                                            ; 0                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
@@ -850,7 +846,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Fitter
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 09 21:14:48 2022
+    Info: Processing started: Sun Oct 09 23:40:41 2022
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Piso -c Piso
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (119004): Automatically selected device EP2C5T144C6 for design Piso
@@ -862,8 +858,7 @@ Info (169124): Fitter converted 3 user pins into dedicated programming pins
     Info (169125): Pin ~ASDO~ is reserved at location 1
     Info (169125): Pin ~nCSO~ is reserved at location 2
     Info (169125): Pin ~LVDS41p/nCEO~ is reserved at location 76
-Critical Warning (169085): No exact pin location assignment(s) for 15 pins of 15 total pins
-    Info (169086): Pin load not assigned to an exact location on the device
+Critical Warning (169085): No exact pin location assignment(s) for 14 pins of 14 total pins
     Info (169086): Pin loadShift not assigned to an exact location on the device
     Info (169086): Pin dataOut not assigned to an exact location on the device
     Info (169086): Pin enable not assigned to an exact location on the device
@@ -891,7 +886,7 @@ Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 13 (unused VREF, 3.3V VCCIO, 11 input, 2 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 12 (unused VREF, 3.3V VCCIO, 10 input, 2 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -918,14 +913,14 @@ Warning (306006): Found 2 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/PISO/output_files/Piso.fit.smsg
 Info: Quartus II 32-bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 471 megabytes
-    Info: Processing ended: Sun Oct 09 21:14:50 2022
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Sun Oct 09 23:40:44 2022
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+

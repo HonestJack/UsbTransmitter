@@ -1,0 +1,655 @@
+Simulator report for CompleteTransmitter
+Mon Oct 10 19:10:03 2022
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 361 nodes    ;
+; Simulation Coverage         ;      55.40 % ;
+; Total Number of Transitions ; 3168         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                                    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                                 ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                       ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                        ;               ;
+; Vector input source                                                                        ; C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/Complete Transmitter/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                         ; On            ;
+; Check outputs                                                                              ; Off                                                                                                        ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                         ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                         ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                         ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                        ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                        ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                                 ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      55.40 % ;
+; Total nodes checked                                 ; 361          ;
+; Total output ports checked                          ; 361          ;
+; Total output ports with complete 1/0-value coverage ; 200          ;
+; Total output ports with no 1/0-value coverage       ; 130          ;
+; Total output ports with no 1-value coverage         ; 155          ;
+; Total output ports with no 0-value coverage         ; 136          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |CompleteTransmitter|outPlus                                                              ; |CompleteTransmitter|outPlus                                                              ; pin_out          ;
+; |CompleteTransmitter|clk                                                                  ; |CompleteTransmitter|clk                                                                  ; out              ;
+; |CompleteTransmitter|dataIn[6]                                                            ; |CompleteTransmitter|dataIn[6]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[3]                                                            ; |CompleteTransmitter|dataIn[3]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[2]                                                            ; |CompleteTransmitter|dataIn[2]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[1]                                                            ; |CompleteTransmitter|dataIn[1]                                                            ; out              ;
+; |CompleteTransmitter|OutMinus                                                             ; |CompleteTransmitter|OutMinus                                                             ; pin_out          ;
+; |CompleteTransmitter|ready                                                                ; |CompleteTransmitter|ready                                                                ; pin_out          ;
+; |CompleteTransmitter|outPiso                                                              ; |CompleteTransmitter|outPiso                                                              ; pin_out          ;
+; |CompleteTransmitter|outStuffer                                                           ; |CompleteTransmitter|outStuffer                                                           ; pin_out          ;
+; |CompleteTransmitter|outNrzi                                                              ; |CompleteTransmitter|outNrzi                                                              ; pin_out          ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]~1  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]~1  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~3  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~3  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~5  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~5  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~7  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~7  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~9  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~9  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~11 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~11 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~13 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~13 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~15 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~15 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]    ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~5                                             ; |CompleteTransmitter|Controller:inst5|state~5                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|process_0~0                                         ; |CompleteTransmitter|Controller:inst5|process_0~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|process_0~1                                         ; |CompleteTransmitter|Controller:inst5|process_0~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~10                                            ; |CompleteTransmitter|Controller:inst5|state~10                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~11                                            ; |CompleteTransmitter|Controller:inst5|state~11                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~12                                            ; |CompleteTransmitter|Controller:inst5|state~12                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~13                                            ; |CompleteTransmitter|Controller:inst5|state~13                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~14                                            ; |CompleteTransmitter|Controller:inst5|state~14                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~19                                            ; |CompleteTransmitter|Controller:inst5|state~19                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~20                                            ; |CompleteTransmitter|Controller:inst5|state~20                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~21                                            ; |CompleteTransmitter|Controller:inst5|state~21                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~22                                            ; |CompleteTransmitter|Controller:inst5|state~22                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~23                                            ; |CompleteTransmitter|Controller:inst5|state~23                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~27                                            ; |CompleteTransmitter|Controller:inst5|state~27                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~28                                            ; |CompleteTransmitter|Controller:inst5|state~28                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~29                                            ; |CompleteTransmitter|Controller:inst5|state~29                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~30                                            ; |CompleteTransmitter|Controller:inst5|state~30                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~36                                            ; |CompleteTransmitter|Controller:inst5|state~36                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state.estado_1                                      ; |CompleteTransmitter|Controller:inst5|state.estado_1                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_2                                      ; |CompleteTransmitter|Controller:inst5|state.estado_2                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_3                                      ; |CompleteTransmitter|Controller:inst5|state.estado_3                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_4                                      ; |CompleteTransmitter|Controller:inst5|state.estado_4                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_5                                      ; |CompleteTransmitter|Controller:inst5|state.estado_5                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state~37                                            ; |CompleteTransmitter|Controller:inst5|state~37                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~42                                            ; |CompleteTransmitter|Controller:inst5|state~42                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~44                                            ; |CompleteTransmitter|Controller:inst5|state~44                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~46                                            ; |CompleteTransmitter|Controller:inst5|state~46                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~48                                            ; |CompleteTransmitter|Controller:inst5|state~48                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|ready                                               ; |CompleteTransmitter|Controller:inst5|ready                                               ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~60                                            ; |CompleteTransmitter|Controller:inst5|state~60                                            ; out0             ;
+; |CompleteTransmitter|Piso:inst|dataOut~0                                                  ; |CompleteTransmitter|Piso:inst|dataOut~0                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~4                                                  ; |CompleteTransmitter|Piso:inst|counter~4                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~5                                                  ; |CompleteTransmitter|Piso:inst|counter~5                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~6                                                  ; |CompleteTransmitter|Piso:inst|counter~6                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~7                                                  ; |CompleteTransmitter|Piso:inst|counter~7                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~0                                                     ; |CompleteTransmitter|Piso:inst|temp~0                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~1                                                     ; |CompleteTransmitter|Piso:inst|temp~1                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~2                                                     ; |CompleteTransmitter|Piso:inst|temp~2                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~3                                                     ; |CompleteTransmitter|Piso:inst|temp~3                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~4                                                     ; |CompleteTransmitter|Piso:inst|temp~4                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~5                                                     ; |CompleteTransmitter|Piso:inst|temp~5                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~6                                                     ; |CompleteTransmitter|Piso:inst|temp~6                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~7                                                     ; |CompleteTransmitter|Piso:inst|temp~7                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|dataOut~1                                                  ; |CompleteTransmitter|Piso:inst|dataOut~1                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~12                                                 ; |CompleteTransmitter|Piso:inst|counter~12                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~13                                                 ; |CompleteTransmitter|Piso:inst|counter~13                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~14                                                 ; |CompleteTransmitter|Piso:inst|counter~14                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~15                                                 ; |CompleteTransmitter|Piso:inst|counter~15                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|loadShift~0                                                ; |CompleteTransmitter|Piso:inst|loadShift~0                                                ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~8                                                     ; |CompleteTransmitter|Piso:inst|temp~8                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~9                                                     ; |CompleteTransmitter|Piso:inst|temp~9                                                     ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~10                                                    ; |CompleteTransmitter|Piso:inst|temp~10                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~11                                                    ; |CompleteTransmitter|Piso:inst|temp~11                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~12                                                    ; |CompleteTransmitter|Piso:inst|temp~12                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~13                                                    ; |CompleteTransmitter|Piso:inst|temp~13                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~14                                                    ; |CompleteTransmitter|Piso:inst|temp~14                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|temp~15                                                    ; |CompleteTransmitter|Piso:inst|temp~15                                                    ; out              ;
+; |CompleteTransmitter|Piso:inst|dataOut~2                                                  ; |CompleteTransmitter|Piso:inst|dataOut~2                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|loadShift~1                                                ; |CompleteTransmitter|Piso:inst|loadShift~1                                                ; out              ;
+; |CompleteTransmitter|Piso:inst|dataOut                                                    ; |CompleteTransmitter|Piso:inst|dataOut                                                    ; regout           ;
+; |CompleteTransmitter|Piso:inst|loadShift                                                  ; |CompleteTransmitter|Piso:inst|loadShift                                                  ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[0]                                                 ; |CompleteTransmitter|Piso:inst|counter[0]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[1]                                                 ; |CompleteTransmitter|Piso:inst|counter[1]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[2]                                                 ; |CompleteTransmitter|Piso:inst|counter[2]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[3]                                                 ; |CompleteTransmitter|Piso:inst|counter[3]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[0]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[0]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[1]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[1]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[2]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[2]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[3]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[3]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[4]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[4]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[5]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[5]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[6]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[6]                                              ; regout           ;
+; |CompleteTransmitter|Piso:inst|\piso:temp[7]                                              ; |CompleteTransmitter|Piso:inst|\piso:temp[7]                                              ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_5                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_5                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state~0                                             ; |CompleteTransmitter|BitStuffer:inst2|state~0                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~1                                             ; |CompleteTransmitter|BitStuffer:inst2|state~1                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~2                                             ; |CompleteTransmitter|BitStuffer:inst2|state~2                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~3                                             ; |CompleteTransmitter|BitStuffer:inst2|state~3                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~5                                             ; |CompleteTransmitter|BitStuffer:inst2|state~5                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~6                                             ; |CompleteTransmitter|BitStuffer:inst2|state~6                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~7                                             ; |CompleteTransmitter|BitStuffer:inst2|state~7                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_0~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_0~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_1~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_1~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_2~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_2~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_3~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_3~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_4~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_4~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_5~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_5~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_6                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_6                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_6~0                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_6~0                                    ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_4                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_4                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_3                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_3                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_2                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_2                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_1                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_1                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_0                                      ; |CompleteTransmitter|BitStuffer:inst2|state.estado_0                                      ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state~8                                             ; |CompleteTransmitter|BitStuffer:inst2|state~8                                             ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_0~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_0~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|dataOut~0                                           ; |CompleteTransmitter|BitStuffer:inst2|dataOut~0                                           ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_1~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_1~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~11                                            ; |CompleteTransmitter|BitStuffer:inst2|state~11                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_2~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_2~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~13                                            ; |CompleteTransmitter|BitStuffer:inst2|state~13                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_3~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_3~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~15                                            ; |CompleteTransmitter|BitStuffer:inst2|state~15                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_4~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_4~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~17                                            ; |CompleteTransmitter|BitStuffer:inst2|state~17                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_5~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_5~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~19                                            ; |CompleteTransmitter|BitStuffer:inst2|state~19                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state.estado_6~1                                    ; |CompleteTransmitter|BitStuffer:inst2|state.estado_6~1                                    ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|stopPiso                                            ; |CompleteTransmitter|BitStuffer:inst2|stopPiso                                            ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|state~25                                            ; |CompleteTransmitter|BitStuffer:inst2|state~25                                            ; out0             ;
+; |CompleteTransmitter|NrziDecoder:inst3|state~0                                            ; |CompleteTransmitter|NrziDecoder:inst3|state~0                                            ; out              ;
+; |CompleteTransmitter|NrziDecoder:inst3|state~1                                            ; |CompleteTransmitter|NrziDecoder:inst3|state~1                                            ; out              ;
+; |CompleteTransmitter|NrziDecoder:inst3|state~2                                            ; |CompleteTransmitter|NrziDecoder:inst3|state~2                                            ; out              ;
+; |CompleteTransmitter|NrziDecoder:inst3|state                                              ; |CompleteTransmitter|NrziDecoder:inst3|state                                              ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~1                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~1                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~2                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~2                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~6                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~6                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~7                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~7                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~8                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~8                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~12                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~12                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~13                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~13                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~14                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~14                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~19                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~19                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~20                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~20                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~24                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~24                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~25                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~25                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~26                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~26                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_1                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_1                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_2                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_2                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|dataOutMinus                                       ; |CompleteTransmitter|DiffEncoder:inst4|dataOutMinus                                       ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|WideOr1                                            ; |CompleteTransmitter|DiffEncoder:inst4|WideOr1                                            ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~33                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~33                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~36                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~36                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~38                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~38                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~48                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~48                                           ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~0                                         ; |CompleteTransmitter|Controller:inst5|Selector2~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~0                                         ; |CompleteTransmitter|Controller:inst5|Selector3~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~2                                         ; |CompleteTransmitter|Controller:inst5|Selector3~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~0                                         ; |CompleteTransmitter|Controller:inst5|Selector4~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~2                                         ; |CompleteTransmitter|Controller:inst5|Selector4~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~0                                         ; |CompleteTransmitter|Controller:inst5|Selector5~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~2                                         ; |CompleteTransmitter|Controller:inst5|Selector5~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~3                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~3                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~4                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~4                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~5                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~5                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector0~6                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector0~6                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector1~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector1~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector1~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector1~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector1~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector1~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector2~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector2~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector2~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector2~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector3~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector3~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector3~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector3~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector4~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector4~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector4~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector4~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector5~0                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector5~0                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector5~1                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector5~1                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector5~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector5~2                                         ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector1~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector1~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector1~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector1~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector1~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector1~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector2~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector2~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector2~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector2~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector2~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector2~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector2~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector2~3                                        ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~0                                                     ; |CompleteTransmitter|Piso:inst|Add0~0                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~1                                                     ; |CompleteTransmitter|Piso:inst|Add0~1                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~2                                                     ; |CompleteTransmitter|Piso:inst|Add0~2                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~3                                                     ; |CompleteTransmitter|Piso:inst|Add0~3                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~4                                                     ; |CompleteTransmitter|Piso:inst|Add0~4                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Equal0~0                                                   ; |CompleteTransmitter|Piso:inst|Equal0~0                                                   ; out0             ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |CompleteTransmitter|valid                                                                ; |CompleteTransmitter|valid                                                                ; out              ;
+; |CompleteTransmitter|reset                                                                ; |CompleteTransmitter|reset                                                                ; out              ;
+; |CompleteTransmitter|dataIn[7]                                                            ; |CompleteTransmitter|dataIn[7]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[5]                                                            ; |CompleteTransmitter|dataIn[5]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[4]                                                            ; |CompleteTransmitter|dataIn[4]                                                            ; out              ;
+; |CompleteTransmitter|dataIn[0]                                                            ; |CompleteTransmitter|dataIn[0]                                                            ; out              ;
+; |CompleteTransmitter|sync[7]                                                              ; |CompleteTransmitter|sync[7]                                                              ; out              ;
+; |CompleteTransmitter|sync[6]                                                              ; |CompleteTransmitter|sync[6]                                                              ; out              ;
+; |CompleteTransmitter|sync[5]                                                              ; |CompleteTransmitter|sync[5]                                                              ; out              ;
+; |CompleteTransmitter|sync[4]                                                              ; |CompleteTransmitter|sync[4]                                                              ; out              ;
+; |CompleteTransmitter|sync[3]                                                              ; |CompleteTransmitter|sync[3]                                                              ; out              ;
+; |CompleteTransmitter|sync[2]                                                              ; |CompleteTransmitter|sync[2]                                                              ; out              ;
+; |CompleteTransmitter|sync[1]                                                              ; |CompleteTransmitter|sync[1]                                                              ; out              ;
+; |CompleteTransmitter|sync[0]                                                              ; |CompleteTransmitter|sync[0]                                                              ; out              ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]~0  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]~0  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]    ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[7]    ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~2  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~2  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~4  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~4  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~6  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~6  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~8  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~8  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~10 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~10 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~12 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~12 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~14 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~14 ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~0                                             ; |CompleteTransmitter|Controller:inst5|state~0                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~1                                             ; |CompleteTransmitter|Controller:inst5|state~1                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~2                                             ; |CompleteTransmitter|Controller:inst5|state~2                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~3                                             ; |CompleteTransmitter|Controller:inst5|state~3                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~6                                             ; |CompleteTransmitter|Controller:inst5|state~6                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~7                                             ; |CompleteTransmitter|Controller:inst5|state~7                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~8                                             ; |CompleteTransmitter|Controller:inst5|state~8                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|process_0~2                                         ; |CompleteTransmitter|Controller:inst5|process_0~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|process_0~3                                         ; |CompleteTransmitter|Controller:inst5|process_0~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~9                                             ; |CompleteTransmitter|Controller:inst5|state~9                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~15                                            ; |CompleteTransmitter|Controller:inst5|state~15                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~16                                            ; |CompleteTransmitter|Controller:inst5|state~16                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~17                                            ; |CompleteTransmitter|Controller:inst5|state~17                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~18                                            ; |CompleteTransmitter|Controller:inst5|state~18                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~24                                            ; |CompleteTransmitter|Controller:inst5|state~24                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~25                                            ; |CompleteTransmitter|Controller:inst5|state~25                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~26                                            ; |CompleteTransmitter|Controller:inst5|state~26                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~31                                            ; |CompleteTransmitter|Controller:inst5|state~31                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~32                                            ; |CompleteTransmitter|Controller:inst5|state~32                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~33                                            ; |CompleteTransmitter|Controller:inst5|state~33                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~34                                            ; |CompleteTransmitter|Controller:inst5|state~34                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~35                                            ; |CompleteTransmitter|Controller:inst5|state~35                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state.estado_0                                      ; |CompleteTransmitter|Controller:inst5|state.estado_0                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_6                                      ; |CompleteTransmitter|Controller:inst5|state.estado_6                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_7                                      ; |CompleteTransmitter|Controller:inst5|state.estado_7                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|WideNor0                                            ; |CompleteTransmitter|Controller:inst5|WideNor0                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state.estado_8                                      ; |CompleteTransmitter|Controller:inst5|state.estado_8                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state~38                                            ; |CompleteTransmitter|Controller:inst5|state~38                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|resetOut                                            ; |CompleteTransmitter|Controller:inst5|resetOut                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~52                                            ; |CompleteTransmitter|Controller:inst5|state~52                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~54                                            ; |CompleteTransmitter|Controller:inst5|state~54                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~56                                            ; |CompleteTransmitter|Controller:inst5|state~56                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~64                                            ; |CompleteTransmitter|Controller:inst5|state~64                                            ; out0             ;
+; |CompleteTransmitter|Piso:inst|counter~0                                                  ; |CompleteTransmitter|Piso:inst|counter~0                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~1                                                  ; |CompleteTransmitter|Piso:inst|counter~1                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~2                                                  ; |CompleteTransmitter|Piso:inst|counter~2                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~3                                                  ; |CompleteTransmitter|Piso:inst|counter~3                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~8                                                  ; |CompleteTransmitter|Piso:inst|counter~8                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~9                                                  ; |CompleteTransmitter|Piso:inst|counter~9                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~10                                                 ; |CompleteTransmitter|Piso:inst|counter~10                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~11                                                 ; |CompleteTransmitter|Piso:inst|counter~11                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter[4]                                                 ; |CompleteTransmitter|Piso:inst|counter[4]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[5]                                                 ; |CompleteTransmitter|Piso:inst|counter[5]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[6]                                                 ; |CompleteTransmitter|Piso:inst|counter[6]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[7]                                                 ; |CompleteTransmitter|Piso:inst|counter[7]                                                 ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state~4                                             ; |CompleteTransmitter|BitStuffer:inst2|state~4                                             ; out              ;
+; |CompleteTransmitter|BitStuffer:inst2|state~9                                             ; |CompleteTransmitter|BitStuffer:inst2|state~9                                             ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~0                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~0                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~3                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~3                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~4                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~4                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~5                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~5                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~9                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~9                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~10                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~10                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~11                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~11                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~15                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~15                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~16                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~16                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~17                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~17                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~18                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~18                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~21                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~21                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~22                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~22                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~23                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~23                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~27                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~27                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~28                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~28                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~29                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~29                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_0                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_0                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_3                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_3                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_4                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_4                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_5                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_5                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~34                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~34                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|enableOut~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|enableOut~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~40                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~40                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~42                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~42                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~44                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~44                                           ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~0                                         ; |CompleteTransmitter|Controller:inst5|Selector0~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~1                                         ; |CompleteTransmitter|Controller:inst5|Selector0~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~2                                         ; |CompleteTransmitter|Controller:inst5|Selector0~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~3                                         ; |CompleteTransmitter|Controller:inst5|Selector0~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~0                                         ; |CompleteTransmitter|Controller:inst5|Selector1~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~1                                         ; |CompleteTransmitter|Controller:inst5|Selector1~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~2                                         ; |CompleteTransmitter|Controller:inst5|Selector1~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~3                                         ; |CompleteTransmitter|Controller:inst5|Selector1~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~1                                         ; |CompleteTransmitter|Controller:inst5|Selector2~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~2                                         ; |CompleteTransmitter|Controller:inst5|Selector2~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~3                                         ; |CompleteTransmitter|Controller:inst5|Selector2~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~1                                         ; |CompleteTransmitter|Controller:inst5|Selector3~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~3                                         ; |CompleteTransmitter|Controller:inst5|Selector3~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~1                                         ; |CompleteTransmitter|Controller:inst5|Selector4~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~3                                         ; |CompleteTransmitter|Controller:inst5|Selector4~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~1                                         ; |CompleteTransmitter|Controller:inst5|Selector5~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~3                                         ; |CompleteTransmitter|Controller:inst5|Selector5~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~0                                         ; |CompleteTransmitter|Controller:inst5|Selector6~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~1                                         ; |CompleteTransmitter|Controller:inst5|Selector6~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~2                                         ; |CompleteTransmitter|Controller:inst5|Selector6~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~3                                         ; |CompleteTransmitter|Controller:inst5|Selector6~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~0                                         ; |CompleteTransmitter|Controller:inst5|Selector7~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~1                                         ; |CompleteTransmitter|Controller:inst5|Selector7~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~2                                         ; |CompleteTransmitter|Controller:inst5|Selector7~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~3                                         ; |CompleteTransmitter|Controller:inst5|Selector7~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~4                                         ; |CompleteTransmitter|Controller:inst5|Selector7~4                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~0                                         ; |CompleteTransmitter|Controller:inst5|Selector8~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~1                                         ; |CompleteTransmitter|Controller:inst5|Selector8~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~2                                         ; |CompleteTransmitter|Controller:inst5|Selector8~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~3                                         ; |CompleteTransmitter|Controller:inst5|Selector8~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~4                                         ; |CompleteTransmitter|Controller:inst5|Selector8~4                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector2~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector2~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector3~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector3~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector4~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector4~2                                         ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector1~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector1~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~3                                        ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~5                                                     ; |CompleteTransmitter|Piso:inst|Add0~5                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~6                                                     ; |CompleteTransmitter|Piso:inst|Add0~6                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~7                                                     ; |CompleteTransmitter|Piso:inst|Add0~7                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~8                                                     ; |CompleteTransmitter|Piso:inst|Add0~8                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~9                                                     ; |CompleteTransmitter|Piso:inst|Add0~9                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~10                                                    ; |CompleteTransmitter|Piso:inst|Add0~10                                                    ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~11                                                    ; |CompleteTransmitter|Piso:inst|Add0~11                                                    ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~12                                                    ; |CompleteTransmitter|Piso:inst|Add0~12                                                    ; out0             ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                 ; Output Port Name                                                                          ; Output Port Type ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+; |CompleteTransmitter|reset                                                                ; |CompleteTransmitter|reset                                                                ; out              ;
+; |CompleteTransmitter|sync[7]                                                              ; |CompleteTransmitter|sync[7]                                                              ; out              ;
+; |CompleteTransmitter|sync[6]                                                              ; |CompleteTransmitter|sync[6]                                                              ; out              ;
+; |CompleteTransmitter|sync[5]                                                              ; |CompleteTransmitter|sync[5]                                                              ; out              ;
+; |CompleteTransmitter|sync[4]                                                              ; |CompleteTransmitter|sync[4]                                                              ; out              ;
+; |CompleteTransmitter|sync[3]                                                              ; |CompleteTransmitter|sync[3]                                                              ; out              ;
+; |CompleteTransmitter|sync[2]                                                              ; |CompleteTransmitter|sync[2]                                                              ; out              ;
+; |CompleteTransmitter|sync[1]                                                              ; |CompleteTransmitter|sync[1]                                                              ; out              ;
+; |CompleteTransmitter|sync[0]                                                              ; |CompleteTransmitter|sync[0]                                                              ; out              ;
+; |CompleteTransmitter|enableOut                                                            ; |CompleteTransmitter|enableOut                                                            ; pin_out          ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~2  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[6]~2  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~4  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[5]~4  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~6  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[4]~6  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~8  ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[3]~8  ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~10 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[2]~10 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~12 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[1]~12 ; out0             ;
+; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~14 ; |CompleteTransmitter|busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|result_node[0]~14 ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~0                                             ; |CompleteTransmitter|Controller:inst5|state~0                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~2                                             ; |CompleteTransmitter|Controller:inst5|state~2                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~3                                             ; |CompleteTransmitter|Controller:inst5|state~3                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~4                                             ; |CompleteTransmitter|Controller:inst5|state~4                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~6                                             ; |CompleteTransmitter|Controller:inst5|state~6                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~7                                             ; |CompleteTransmitter|Controller:inst5|state~7                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~8                                             ; |CompleteTransmitter|Controller:inst5|state~8                                             ; out              ;
+; |CompleteTransmitter|Controller:inst5|process_0~2                                         ; |CompleteTransmitter|Controller:inst5|process_0~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|process_0~3                                         ; |CompleteTransmitter|Controller:inst5|process_0~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~15                                            ; |CompleteTransmitter|Controller:inst5|state~15                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~16                                            ; |CompleteTransmitter|Controller:inst5|state~16                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~17                                            ; |CompleteTransmitter|Controller:inst5|state~17                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~24                                            ; |CompleteTransmitter|Controller:inst5|state~24                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~25                                            ; |CompleteTransmitter|Controller:inst5|state~25                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~26                                            ; |CompleteTransmitter|Controller:inst5|state~26                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~31                                            ; |CompleteTransmitter|Controller:inst5|state~31                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~32                                            ; |CompleteTransmitter|Controller:inst5|state~32                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~33                                            ; |CompleteTransmitter|Controller:inst5|state~33                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~34                                            ; |CompleteTransmitter|Controller:inst5|state~34                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state~35                                            ; |CompleteTransmitter|Controller:inst5|state~35                                            ; out              ;
+; |CompleteTransmitter|Controller:inst5|state.estado_6                                      ; |CompleteTransmitter|Controller:inst5|state.estado_6                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state.estado_7                                      ; |CompleteTransmitter|Controller:inst5|state.estado_7                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|WideNor1                                            ; |CompleteTransmitter|Controller:inst5|WideNor1                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|WideNor2                                            ; |CompleteTransmitter|Controller:inst5|WideNor2                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|WideNor3                                            ; |CompleteTransmitter|Controller:inst5|WideNor3                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state.estado_8                                      ; |CompleteTransmitter|Controller:inst5|state.estado_8                                      ; regout           ;
+; |CompleteTransmitter|Controller:inst5|state~38                                            ; |CompleteTransmitter|Controller:inst5|state~38                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~52                                            ; |CompleteTransmitter|Controller:inst5|state~52                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~54                                            ; |CompleteTransmitter|Controller:inst5|state~54                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~56                                            ; |CompleteTransmitter|Controller:inst5|state~56                                            ; out0             ;
+; |CompleteTransmitter|Controller:inst5|state~64                                            ; |CompleteTransmitter|Controller:inst5|state~64                                            ; out0             ;
+; |CompleteTransmitter|Piso:inst|counter~0                                                  ; |CompleteTransmitter|Piso:inst|counter~0                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~1                                                  ; |CompleteTransmitter|Piso:inst|counter~1                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~2                                                  ; |CompleteTransmitter|Piso:inst|counter~2                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~3                                                  ; |CompleteTransmitter|Piso:inst|counter~3                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~8                                                  ; |CompleteTransmitter|Piso:inst|counter~8                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~9                                                  ; |CompleteTransmitter|Piso:inst|counter~9                                                  ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~10                                                 ; |CompleteTransmitter|Piso:inst|counter~10                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter~11                                                 ; |CompleteTransmitter|Piso:inst|counter~11                                                 ; out              ;
+; |CompleteTransmitter|Piso:inst|counter[4]                                                 ; |CompleteTransmitter|Piso:inst|counter[4]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[5]                                                 ; |CompleteTransmitter|Piso:inst|counter[5]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[6]                                                 ; |CompleteTransmitter|Piso:inst|counter[6]                                                 ; regout           ;
+; |CompleteTransmitter|Piso:inst|counter[7]                                                 ; |CompleteTransmitter|Piso:inst|counter[7]                                                 ; regout           ;
+; |CompleteTransmitter|BitStuffer:inst2|state~4                                             ; |CompleteTransmitter|BitStuffer:inst2|state~4                                             ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~3                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~3                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~4                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~4                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~5                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~5                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~9                                            ; |CompleteTransmitter|DiffEncoder:inst4|state~9                                            ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~10                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~10                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~11                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~11                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~16                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~16                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~17                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~17                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~21                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~21                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~22                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~22                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~23                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~23                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~28                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~28                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~29                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~29                                           ; out              ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_3                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_3                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_4                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_4                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|WideNor0                                           ; |CompleteTransmitter|DiffEncoder:inst4|WideNor0                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state.estado_5                                     ; |CompleteTransmitter|DiffEncoder:inst4|state.estado_5                                     ; regout           ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~40                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~40                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~42                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~42                                           ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|state~44                                           ; |CompleteTransmitter|DiffEncoder:inst4|state~44                                           ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~0                                         ; |CompleteTransmitter|Controller:inst5|Selector0~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~1                                         ; |CompleteTransmitter|Controller:inst5|Selector0~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~2                                         ; |CompleteTransmitter|Controller:inst5|Selector0~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector0~3                                         ; |CompleteTransmitter|Controller:inst5|Selector0~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~1                                         ; |CompleteTransmitter|Controller:inst5|Selector1~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector1~2                                         ; |CompleteTransmitter|Controller:inst5|Selector1~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~1                                         ; |CompleteTransmitter|Controller:inst5|Selector2~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~2                                         ; |CompleteTransmitter|Controller:inst5|Selector2~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector2~3                                         ; |CompleteTransmitter|Controller:inst5|Selector2~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~1                                         ; |CompleteTransmitter|Controller:inst5|Selector3~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector3~3                                         ; |CompleteTransmitter|Controller:inst5|Selector3~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~1                                         ; |CompleteTransmitter|Controller:inst5|Selector4~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector4~3                                         ; |CompleteTransmitter|Controller:inst5|Selector4~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~1                                         ; |CompleteTransmitter|Controller:inst5|Selector5~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector5~3                                         ; |CompleteTransmitter|Controller:inst5|Selector5~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~0                                         ; |CompleteTransmitter|Controller:inst5|Selector6~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~1                                         ; |CompleteTransmitter|Controller:inst5|Selector6~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~2                                         ; |CompleteTransmitter|Controller:inst5|Selector6~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector6~3                                         ; |CompleteTransmitter|Controller:inst5|Selector6~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~0                                         ; |CompleteTransmitter|Controller:inst5|Selector7~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~1                                         ; |CompleteTransmitter|Controller:inst5|Selector7~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~2                                         ; |CompleteTransmitter|Controller:inst5|Selector7~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~3                                         ; |CompleteTransmitter|Controller:inst5|Selector7~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector7~4                                         ; |CompleteTransmitter|Controller:inst5|Selector7~4                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~0                                         ; |CompleteTransmitter|Controller:inst5|Selector8~0                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~1                                         ; |CompleteTransmitter|Controller:inst5|Selector8~1                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~2                                         ; |CompleteTransmitter|Controller:inst5|Selector8~2                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~3                                         ; |CompleteTransmitter|Controller:inst5|Selector8~3                                         ; out0             ;
+; |CompleteTransmitter|Controller:inst5|Selector8~4                                         ; |CompleteTransmitter|Controller:inst5|Selector8~4                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector2~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector2~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector3~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector3~2                                         ; out0             ;
+; |CompleteTransmitter|BitStuffer:inst2|Selector4~2                                         ; |CompleteTransmitter|BitStuffer:inst2|Selector4~2                                         ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector0~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector0~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector1~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector1~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector3~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector3~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector4~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector4~3                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~0                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~0                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~1                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~1                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~2                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~2                                        ; out0             ;
+; |CompleteTransmitter|DiffEncoder:inst4|Selector5~3                                        ; |CompleteTransmitter|DiffEncoder:inst4|Selector5~3                                        ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~5                                                     ; |CompleteTransmitter|Piso:inst|Add0~5                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~6                                                     ; |CompleteTransmitter|Piso:inst|Add0~6                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~7                                                     ; |CompleteTransmitter|Piso:inst|Add0~7                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~8                                                     ; |CompleteTransmitter|Piso:inst|Add0~8                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~9                                                     ; |CompleteTransmitter|Piso:inst|Add0~9                                                     ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~10                                                    ; |CompleteTransmitter|Piso:inst|Add0~10                                                    ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~11                                                    ; |CompleteTransmitter|Piso:inst|Add0~11                                                    ; out0             ;
+; |CompleteTransmitter|Piso:inst|Add0~12                                                    ; |CompleteTransmitter|Piso:inst|Add0~12                                                    ; out0             ;
++-------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Oct 10 19:10:03 2022
+Info: Command: quartus_sim --simulation_results_format=VWF CompleteTransmitter -c CompleteTransmitter
+Info (324025): Using vector source file "C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/Complete Transmitter/Waveform.vwf"
+Warning (328014): Can't find node "busmux:inst6|lpm_mux:$00000|data[1]" for functional simulation. Ignored vector source file node.
+Warning (328014): Can't find node "busmux:inst6|lpm_mux:$00000|data[0]" for functional simulation. Ignored vector source file node.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      55.40 %
+Info (328052): Number of transitions in simulation is 3168
+Info (324045): Vector file CompleteTransmitter.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4454 megabytes
+    Info: Processing ended: Mon Oct 10 19:10:03 2022
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

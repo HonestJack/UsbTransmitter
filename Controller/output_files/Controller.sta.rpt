@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Controller
-Sat Oct 08 20:14:05 2022
+Sun Oct 09 23:42:16 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -645,7 +645,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Oct 08 20:14:02 2022
+    Info: Processing started: Sun Oct 09 23:42:14 2022
 Info: Command: quartus_sta Controller -c Controller
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -692,8 +692,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 341 megabytes
-    Info: Processing ended: Sat Oct 08 20:14:05 2022
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Sun Oct 09 23:42:16 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

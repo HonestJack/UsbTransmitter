@@ -1,0 +1,1416 @@
+TimeQuest Timing Analyzer report for CompleteTransmitter
+Mon Oct 10 18:46:44 2022
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Recovery: 'clk'
+ 14. Slow Model Removal: 'clk'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Setup Times
+ 17. Hold Times
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'clk'
+ 26. Fast Model Hold: 'clk'
+ 27. Fast Model Recovery: 'clk'
+ 28. Fast Model Removal: 'clk'
+ 29. Fast Model Minimum Pulse Width: 'clk'
+ 30. Setup Times
+ 31. Hold Times
+ 32. Clock to Output Times
+ 33. Minimum Clock to Output Times
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Setup Transfers
+ 40. Hold Transfers
+ 41. Recovery Transfers
+ 42. Removal Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                    ;
++--------------------+-----------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; CompleteTransmitter                                             ;
+; Device Family      ; Cyclone II                                                      ;
+; Device Name        ; EP2C5T144C6                                                     ;
+; Timing Models      ; Final                                                           ;
+; Delay Model        ; Combined                                                        ;
+; Rise/Fall Delays   ; Unavailable                                                     ;
++--------------------+-----------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
+;     3-8 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 363.37 MHz ; 363.37 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.752 ; -48.350       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
++--------------------------------+
+; Slow Model Recovery Summary    ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.717 ; -15.034       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 1.053 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -42.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                          ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.752 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.788      ;
+; -1.702 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.738      ;
+; -1.612 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.648      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.606 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.642      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.556 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.592      ;
+; -1.524 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.560      ;
+; -1.478 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.514      ;
+; -1.468 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.504      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.466 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.502      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.451 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.487      ;
+; -1.444 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.480      ;
+; -1.444 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.480      ;
+; -1.444 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.480      ;
+; -1.444 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.480      ;
+; -1.412 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.448      ;
+; -1.410 ; Piso:inst|counter[0]            ; Piso:inst|counter[3]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.446      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.407 ; Controller:inst5|state.estado_7 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.443      ;
+; -1.392 ; Piso:inst|counter[4]            ; Piso:inst|dataOut               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.428      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.368 ; Controller:inst5|state.estado_6 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.404      ;
+; -1.360 ; Controller:inst5|state.estado_0 ; Controller:inst5|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.396      ;
+; -1.359 ; Controller:inst5|state.estado_0 ; Controller:inst5|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.395      ;
+; -1.348 ; Controller:inst5|state.estado_8 ; Piso:inst|dataOut               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.384      ;
+; -1.342 ; Piso:inst|counter[5]            ; Piso:inst|dataOut               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.378      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.332 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.331 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[0]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.367      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.327 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.363      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.322 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.358      ;
+; -1.318 ; Controller:inst5|state.estado_8 ; Controller:inst5|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.354      ;
+; -1.309 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.345      ;
+; -1.309 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.345      ;
+; -1.309 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.345      ;
+; -1.309 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.345      ;
+; -1.304 ; Controller:inst5|state.estado_7 ; Piso:inst|dataOut               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.340      ;
+; -1.285 ; Piso:inst|loadShift             ; Controller:inst5|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.321      ;
+; -1.281 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[0]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.317      ;
+; -1.278 ; Controller:inst5|state.estado_8 ; Controller:inst5|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 2.314      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.266 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 2.302      ;
+; -1.265 ; Controller:inst5|state.estado_6 ; Piso:inst|dataOut               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.301      ;
+; -1.256 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_0 ; clk          ; clk         ; 1.000        ; -0.001     ; 2.291      ;
+; -1.256 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_1 ; clk          ; clk         ; 1.000        ; -0.001     ; 2.291      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                            ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Controller:inst5|state.estado_1  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Piso:inst|dataOut                ; Piso:inst|dataOut                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; NrziDecoder:inst3|state          ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Controller:inst5|state.estado_5  ; Controller:inst5|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Controller:inst5|state.estado_0  ; Controller:inst5|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Piso:inst|loadShift              ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Controller:inst5|state.estado_6  ; Controller:inst5|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.532 ; DiffEncoder:inst4|state.estado_4 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.533 ; DiffEncoder:inst4|state.estado_3 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.642 ; Controller:inst5|state.estado_5  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.908      ;
+; 0.655 ; BitStuffer:inst2|state.estado_5  ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.659 ; BitStuffer:inst2|state.estado_1  ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.667 ; Piso:inst|\piso:temp[1]          ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.933      ;
+; 0.668 ; Piso:inst|\piso:temp[3]          ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.934      ;
+; 0.669 ; BitStuffer:inst2|state.estado_3  ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.670 ; Piso:inst|\piso:temp[5]          ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.936      ;
+; 0.678 ; Controller:inst5|state.estado_2  ; Controller:inst5|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.944      ;
+; 0.721 ; Controller:inst5|state.estado_6  ; Controller:inst5|state.estado_7  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.987      ;
+; 0.759 ; BitStuffer:inst2|state.estado_0  ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.025      ;
+; 0.778 ; BitStuffer:inst2|state.estado_4  ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.044      ;
+; 0.796 ; BitStuffer:inst2|state.estado_2  ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.063      ;
+; 0.802 ; Piso:inst|counter[1]             ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802 ; Piso:inst|counter[5]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.806 ; BitStuffer:inst2|state.estado_0  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.808 ; Piso:inst|\piso:temp[6]          ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.074      ;
+; 0.810 ; Controller:inst5|state.estado_7  ; Controller:inst5|state.estado_8  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.076      ;
+; 0.815 ; NrziDecoder:inst3|state          ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.828 ; NrziDecoder:inst3|state          ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.838 ; Piso:inst|counter[6]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.104      ;
+; 0.841 ; Piso:inst|counter[2]             ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.845 ; Piso:inst|\piso:temp[2]          ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.111      ;
+; 0.849 ; Piso:inst|\piso:temp[0]          ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.115      ;
+; 0.968 ; BitStuffer:inst2|state.estado_6  ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.233      ;
+; 0.983 ; BitStuffer:inst2|state.estado_6  ; Controller:inst5|state.estado_7  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.249      ;
+; 0.985 ; Piso:inst|counter[4]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.251      ;
+; 0.989 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.254      ;
+; 0.989 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.254      ;
+; 0.990 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.255      ;
+; 0.998 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.264      ;
+; 0.999 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.265      ;
+; 1.003 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.269      ;
+; 1.003 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.269      ;
+; 1.019 ; Piso:inst|counter[7]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.285      ;
+; 1.056 ; Piso:inst|\piso:temp[4]          ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.322      ;
+; 1.065 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.001      ; 1.332      ;
+; 1.089 ; Controller:inst5|state.estado_1  ; Controller:inst5|state.estado_2  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.354      ;
+; 1.094 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.360      ;
+; 1.185 ; Piso:inst|counter[5]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.188 ; Controller:inst5|state.estado_2  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.454      ;
+; 1.193 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.459      ;
+; 1.194 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.460      ;
+; 1.206 ; Piso:inst|counter[7]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.472      ;
+; 1.218 ; DiffEncoder:inst4|state.estado_5 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.483      ;
+; 1.221 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.001      ; 1.488      ;
+; 1.224 ; Piso:inst|counter[6]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.490      ;
+; 1.227 ; Controller:inst5|state.estado_3  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.494      ;
+; 1.233 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.499      ;
+; 1.234 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.500      ;
+; 1.256 ; Piso:inst|counter[5]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.522      ;
+; 1.272 ; Piso:inst|counter[3]             ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.538      ;
+; 1.277 ; Piso:inst|counter[1]             ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.543      ;
+; 1.283 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.549      ;
+; 1.298 ; Piso:inst|counter[2]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.564      ;
+; 1.332 ; BitStuffer:inst2|state.estado_6  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.598      ;
+; 1.340 ; Piso:inst|counter[6]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.606      ;
+; 1.348 ; Controller:inst5|state.estado_3  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 1.615      ;
+; 1.361 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.627      ;
+; 1.361 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.627      ;
+; 1.362 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.628      ;
+; 1.364 ; DiffEncoder:inst4|state.estado_0 ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.631      ;
+; 1.366 ; Piso:inst|counter[0]             ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.632      ;
+; 1.368 ; Piso:inst|counter[4]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.634      ;
+; 1.369 ; Piso:inst|counter[2]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.635      ;
+; 1.390 ; Piso:inst|counter[7]             ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.656      ;
+; 1.405 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.671      ;
+; 1.406 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.672      ;
+; 1.413 ; Piso:inst|counter[3]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.679      ;
+; 1.416 ; Piso:inst|counter[7]             ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.682      ;
+; 1.418 ; Controller:inst5|state.estado_0  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.684      ;
+; 1.419 ; Piso:inst|counter[1]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.685      ;
+; 1.422 ; Controller:inst5|state.estado_0  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; -0.001     ; 1.687      ;
+; 1.427 ; Controller:inst5|state.estado_1  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; -0.001     ; 1.692      ;
+; 1.427 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.692      ;
+; 1.427 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.692      ;
+; 1.428 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.693      ;
+; 1.430 ; Piso:inst|counter[5]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.696      ;
+; 1.432 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.697      ;
+; 1.432 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.697      ;
+; 1.433 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.698      ;
+; 1.435 ; Piso:inst|counter[3]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.701      ;
+; 1.435 ; Controller:inst5|state.estado_8  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.701      ;
+; 1.439 ; Piso:inst|counter[4]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.705      ;
+; 1.439 ; Controller:inst5|state.estado_1  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.705      ;
+; 1.440 ; Piso:inst|counter[2]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.706      ;
+; 1.446 ; Piso:inst|counter[3]             ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.712      ;
+; 1.456 ; BitStuffer:inst2|state.estado_6  ; Controller:inst5|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.722      ;
+; 1.480 ; Piso:inst|counter[4]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 1.746      ;
+; 1.484 ; Piso:inst|counter[3]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.750      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                                                        ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.717 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.753      ;
+; -0.717 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.753      ;
+; -0.717 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.753      ;
+; -0.717 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.753      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; NrziDecoder:inst3|state          ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.697 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.732      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.474 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.510      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[3]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[0]             ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[0]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
+; -0.283 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 1.000        ; 0.000      ; 1.319      ;
++--------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                                                        ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.053 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.319      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.244 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.510      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.467 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.732      ;
+; 1.487 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.753      ;
+; 1.487 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.753      ;
+; 1.487 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.753      ;
+; 1.487 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.753      ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_3 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_4 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_4 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_5 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_5 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; NrziDecoder:inst3|state          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; NrziDecoder:inst3|state          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|dataOut                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|dataOut                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|loadShift              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|loadShift              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_0|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_0|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_4|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_4|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_5|clk         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; 3.764  ; 3.764  ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; 3.976  ; 3.976  ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; -0.024 ; -0.024 ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; 0.047  ; 0.047  ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; 4.271  ; 4.271  ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; 3.963  ; 3.963  ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; 3.735  ; 3.735  ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; 3.965  ; 3.965  ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; 3.765  ; 3.765  ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; 0.010  ; 0.010  ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; -0.020 ; -0.020 ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; 4.258  ; 4.258  ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; 3.797  ; 3.797  ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; 3.706  ; 3.706  ; Rise       ; clk             ;
+; valid      ; clk        ; 4.345  ; 4.345  ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 0.254  ; 0.254  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; -3.534 ; -3.534 ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; -3.746 ; -3.746 ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; -4.055 ; -4.055 ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; 0.254  ; 0.254  ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; 0.183  ; 0.183  ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; -4.041 ; -4.041 ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; -3.733 ; -3.733 ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; -3.505 ; -3.505 ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 0.250  ; 0.250  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; -3.735 ; -3.735 ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; -4.055 ; -4.055 ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; -3.535 ; -3.535 ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; 0.220  ; 0.220  ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; 0.250  ; 0.250  ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; -4.028 ; -4.028 ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; -3.567 ; -3.567 ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; -3.476 ; -3.476 ; Rise       ; clk             ;
+; valid      ; clk        ; -3.419 ; -3.419 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 7.078 ; 7.078 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 6.111 ; 6.111 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 5.735 ; 5.735 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 7.460 ; 7.460 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 6.263 ; 6.263 ; Rise       ; clk             ;
+; ready      ; clk        ; 6.252 ; 6.252 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 6.754 ; 6.754 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 6.111 ; 6.111 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 5.735 ; 5.735 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 7.116 ; 7.116 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 6.263 ; 6.263 ; Rise       ; clk             ;
+; ready      ; clk        ; 6.252 ; 6.252 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.297 ; -4.564        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Recovery Summary   ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.091 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Removal Summary    ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.593 ; 0.000         ;
++-------+-------+---------------+
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -42.380               ;
++-------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                          ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.297 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.329      ;
+; -0.281 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.313      ;
+; -0.230 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.262      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.228 ; Piso:inst|counter[4]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.259      ;
+; -0.214 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.246      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.212 ; Piso:inst|counter[5]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.243      ;
+; -0.208 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.240      ;
+; -0.208 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.240      ;
+; -0.208 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.240      ;
+; -0.208 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.240      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.197 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.230      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.181 ; Controller:inst5|state.estado_7 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.214      ;
+; -0.174 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.206      ;
+; -0.164 ; Piso:inst|counter[0]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.197      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.161 ; Piso:inst|counter[1]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.192      ;
+; -0.158 ; Piso:inst|counter[7]            ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.190      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.145 ; Piso:inst|counter[6]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.176      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.144 ; Controller:inst5|state.estado_6 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.177      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.143 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.176      ;
+; -0.126 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_0 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.158      ;
+; -0.126 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_1 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.158      ;
+; -0.126 ; Controller:inst5|state.estado_8 ; BitStuffer:inst2|state.estado_2 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.158      ;
+; -0.117 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.149      ;
+; -0.117 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.149      ;
+; -0.117 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.149      ;
+; -0.117 ; Controller:inst5|state.estado_7 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.149      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[3]            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|counter[0]            ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[0]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.107 ; Controller:inst5|state.estado_8 ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; 0.000      ; 1.139      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[1]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[2]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[3]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[4]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[5]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.105 ; Piso:inst|counter[2]            ; Piso:inst|\piso:temp[6]         ; clk          ; clk         ; 1.000        ; -0.001     ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[2]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[1]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[4]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[5]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[6]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|counter[7]            ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.103 ; BitStuffer:inst2|state.estado_6 ; Piso:inst|\piso:temp[7]         ; clk          ; clk         ; 1.000        ; 0.001      ; 1.136      ;
+; -0.102 ; Controller:inst5|state.estado_1 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.134      ;
+; -0.102 ; Controller:inst5|state.estado_1 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.134      ;
+; -0.102 ; Controller:inst5|state.estado_1 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.134      ;
+; -0.102 ; Controller:inst5|state.estado_1 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.134      ;
+; -0.095 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.127      ;
+; -0.095 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.127      ;
+; -0.095 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.127      ;
+; -0.095 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_6 ; clk          ; clk         ; 1.000        ; 0.000      ; 1.127      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                            ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Controller:inst5|state.estado_1  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Piso:inst|dataOut                ; Piso:inst|dataOut                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; NrziDecoder:inst3|state          ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Controller:inst5|state.estado_5  ; Controller:inst5|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Controller:inst5|state.estado_0  ; Controller:inst5|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Piso:inst|loadShift              ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Controller:inst5|state.estado_6  ; Controller:inst5|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.246 ; DiffEncoder:inst4|state.estado_3 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.246 ; DiffEncoder:inst4|state.estado_4 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.300 ; Controller:inst5|state.estado_5  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.452      ;
+; 0.319 ; BitStuffer:inst2|state.estado_5  ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.471      ;
+; 0.321 ; BitStuffer:inst2|state.estado_1  ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.329 ; BitStuffer:inst2|state.estado_3  ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.329 ; Piso:inst|\piso:temp[1]          ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.330 ; Controller:inst5|state.estado_6  ; Controller:inst5|state.estado_7  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.330 ; Piso:inst|\piso:temp[3]          ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.332 ; Piso:inst|\piso:temp[5]          ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.484      ;
+; 0.333 ; Controller:inst5|state.estado_2  ; Controller:inst5|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.485      ;
+; 0.358 ; Piso:inst|counter[1]             ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; Piso:inst|counter[5]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; BitStuffer:inst2|state.estado_0  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; BitStuffer:inst2|state.estado_0  ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; Controller:inst5|state.estado_7  ; Controller:inst5|state.estado_8  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.367 ; BitStuffer:inst2|state.estado_4  ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.373 ; Piso:inst|counter[2]             ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; Piso:inst|counter[6]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.526      ;
+; 0.383 ; NrziDecoder:inst3|state          ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.391 ; NrziDecoder:inst3|state          ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.543      ;
+; 0.391 ; BitStuffer:inst2|state.estado_2  ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.543      ;
+; 0.400 ; Piso:inst|\piso:temp[6]          ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.553      ;
+; 0.410 ; Piso:inst|\piso:temp[2]          ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.562      ;
+; 0.411 ; Piso:inst|\piso:temp[0]          ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.563      ;
+; 0.440 ; Piso:inst|counter[4]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.592      ;
+; 0.453 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.604      ;
+; 0.454 ; Piso:inst|counter[7]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.606      ;
+; 0.456 ; BitStuffer:inst2|state.estado_6  ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.608      ;
+; 0.456 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.607      ;
+; 0.456 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.607      ;
+; 0.459 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.610      ;
+; 0.459 ; BitStuffer:inst2|state.estado_6  ; Controller:inst5|state.estado_7  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.611      ;
+; 0.460 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.611      ;
+; 0.462 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.613      ;
+; 0.463 ; Piso:inst|dataOut                ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.614      ;
+; 0.475 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.628      ;
+; 0.482 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.634      ;
+; 0.498 ; Piso:inst|counter[5]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; Piso:inst|\piso:temp[4]          ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.651      ;
+; 0.514 ; Piso:inst|counter[6]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.666      ;
+; 0.516 ; Controller:inst5|state.estado_1  ; Controller:inst5|state.estado_2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.668      ;
+; 0.532 ; Piso:inst|counter[7]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.533 ; Piso:inst|counter[5]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.685      ;
+; 0.546 ; Controller:inst5|state.estado_2  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.698      ;
+; 0.548 ; Controller:inst5|state.estado_3  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.548 ; Piso:inst|counter[2]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.551 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; Piso:inst|counter[1]             ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.703      ;
+; 0.551 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.704      ;
+; 0.552 ; Controller:inst5|state.estado_2  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.553 ; Piso:inst|counter[3]             ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.705      ;
+; 0.561 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.713      ;
+; 0.562 ; DiffEncoder:inst4|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.714      ;
+; 0.563 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.715      ;
+; 0.565 ; DiffEncoder:inst4|state.estado_5 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; -0.001     ; 0.716      ;
+; 0.578 ; Piso:inst|counter[0]             ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.731      ;
+; 0.578 ; Piso:inst|counter[4]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.730      ;
+; 0.583 ; Piso:inst|counter[2]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.735      ;
+; 0.588 ; Piso:inst|counter[6]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.740      ;
+; 0.590 ; BitStuffer:inst2|state.estado_6  ; Controller:inst5|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.595 ; Controller:inst5|state.estado_3  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.748      ;
+; 0.596 ; Piso:inst|counter[3]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.749      ;
+; 0.613 ; Piso:inst|counter[4]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.765      ;
+; 0.618 ; Piso:inst|counter[2]             ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.770      ;
+; 0.621 ; Piso:inst|counter[1]             ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.622 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.774      ;
+; 0.622 ; Controller:inst5|state.estado_0  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.775      ;
+; 0.623 ; DiffEncoder:inst4|state.estado_0 ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.775      ;
+; 0.623 ; Controller:inst5|state.estado_4  ; Controller:inst5|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.775      ;
+; 0.623 ; DiffEncoder:inst4|state.estado_2 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.775      ;
+; 0.627 ; Piso:inst|counter[3]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.001      ; 0.780      ;
+; 0.628 ; Piso:inst|counter[7]             ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.779      ;
+; 0.629 ; Piso:inst|counter[7]             ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; -0.001     ; 0.780      ;
+; 0.630 ; Piso:inst|counter[3]             ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.631 ; Piso:inst|counter[3]             ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.784      ;
+; 0.638 ; Controller:inst5|state.estado_0  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.641 ; Controller:inst5|state.estado_8  ; Controller:inst5|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.641 ; Controller:inst5|state.estado_1  ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.794      ;
+; 0.642 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.643 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.643 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.643 ; DiffEncoder:inst4|state.estado_1 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.644 ; Controller:inst5|state.estado_0  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.645 ; Controller:inst5|state.estado_1  ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.648 ; Piso:inst|counter[4]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.650 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.650 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.651 ; Controller:inst5|state.estado_1  ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.803      ;
+; 0.653 ; Piso:inst|counter[2]             ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.655 ; Piso:inst|counter[5]             ; Piso:inst|loadShift              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.807      ;
++-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                                                       ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.091 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.941      ;
+; 0.091 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.941      ;
+; 0.091 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.941      ;
+; 0.091 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.941      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; NrziDecoder:inst3|state          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.103 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.929      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]             ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.203 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 1.000        ; 0.001      ; 0.830      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[3]             ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[0]             ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[0]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
+; 0.287 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 1.000        ; 0.000      ; 0.745      ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                                                        ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                          ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[3]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[0]             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[3]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[4]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[5]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.593 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[6]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.745      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_3 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_4 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_5 ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[2]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[1]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[4]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[5]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[6]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|counter[7]             ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.677 ; Controller:inst5|state.estado_0 ; Piso:inst|\piso:temp[7]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.830      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_0  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; NrziDecoder:inst3|state          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_1 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_2 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; DiffEncoder:inst4|state.estado_0 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_1  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.777 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_2  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.789 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_3  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.789 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_4  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.789 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_5  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.789 ; Controller:inst5|state.estado_0 ; BitStuffer:inst2|state.estado_6  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
++-------+---------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                           ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BitStuffer:inst2|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BitStuffer:inst2|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_6  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_7  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_7  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Controller:inst5|state.estado_8  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Controller:inst5|state.estado_8  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_2 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_2 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_3 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_3 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_4 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_4 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_5 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; DiffEncoder:inst4|state.estado_5 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; NrziDecoder:inst3|state          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; NrziDecoder:inst3|state          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|\piso:temp[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|\piso:temp[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[2]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[3]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[4]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[5]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[6]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|counter[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|counter[7]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|dataOut                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|dataOut                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Piso:inst|loadShift              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Piso:inst|loadShift              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_0|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_0|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_1|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_3|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_4|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst2|state.estado_4|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst2|state.estado_5|clk         ;
++--------+--------------+----------------+------------------+-------+------------+----------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 2.317  ; 2.317  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; 2.064  ; 2.064  ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; 2.171  ; 2.171  ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; 2.317  ; 2.317  ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; -0.280 ; -0.280 ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; -0.247 ; -0.247 ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; 2.302  ; 2.302  ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; 2.160  ; 2.160  ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; 2.055  ; 2.055  ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 2.337  ; 2.337  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; 2.166  ; 2.166  ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; 2.337  ; 2.337  ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; 2.067  ; 2.067  ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; -0.265 ; -0.265 ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; -0.278 ; -0.278 ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; 2.325  ; 2.325  ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; 2.088  ; 2.088  ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; 2.051  ; 2.051  ; Rise       ; clk             ;
+; valid      ; clk        ; 2.352  ; 2.352  ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 0.400  ; 0.400  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; -1.944 ; -1.944 ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; -2.051 ; -2.051 ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; -2.197 ; -2.197 ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; 0.400  ; 0.400  ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; 0.367  ; 0.367  ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; -2.182 ; -2.182 ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; -2.040 ; -2.040 ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; -1.935 ; -1.935 ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 0.398  ; 0.398  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; -2.046 ; -2.046 ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; -2.217 ; -2.217 ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; -1.947 ; -1.947 ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; 0.385  ; 0.385  ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; 0.398  ; 0.398  ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; -2.205 ; -2.205 ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; -1.968 ; -1.968 ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; -1.931 ; -1.931 ; Rise       ; clk             ;
+; valid      ; clk        ; -1.907 ; -1.907 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 3.892 ; 3.892 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 3.343 ; 3.343 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 3.470 ; 3.470 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 3.235 ; 3.235 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 4.065 ; 4.065 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 3.486 ; 3.486 ; Rise       ; clk             ;
+; ready      ; clk        ; 3.473 ; 3.473 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 3.745 ; 3.745 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 3.343 ; 3.343 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 3.470 ; 3.470 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 3.235 ; 3.235 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 3.910 ; 3.910 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 3.486 ; 3.486 ; Rise       ; clk             ;
+; ready      ; clk        ; 3.473 ; 3.473 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.752  ; 0.215 ; -0.717   ; 0.593   ; -1.380              ;
+;  clk             ; -1.752  ; 0.215 ; -0.717   ; 0.593   ; -1.380              ;
+; Design-wide TNS  ; -48.35  ; 0.0   ; -15.034  ; 0.0     ; -42.38              ;
+;  clk             ; -48.350 ; 0.000 ; -15.034  ; 0.000   ; -42.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; 3.764  ; 3.764  ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; 3.976  ; 3.976  ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; -0.024 ; -0.024 ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; 0.047  ; 0.047  ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; 4.271  ; 4.271  ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; 3.963  ; 3.963  ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; 3.735  ; 3.735  ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; 3.965  ; 3.965  ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; 4.285  ; 4.285  ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; 3.765  ; 3.765  ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; 0.010  ; 0.010  ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; -0.020 ; -0.020 ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; 4.258  ; 4.258  ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; 3.797  ; 3.797  ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; 3.706  ; 3.706  ; Rise       ; clk             ;
+; valid      ; clk        ; 4.345  ; 4.345  ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; dataIn[*]  ; clk        ; 0.400  ; 0.400  ; Rise       ; clk             ;
+;  dataIn[0] ; clk        ; -1.944 ; -1.944 ; Rise       ; clk             ;
+;  dataIn[1] ; clk        ; -2.051 ; -2.051 ; Rise       ; clk             ;
+;  dataIn[2] ; clk        ; -2.197 ; -2.197 ; Rise       ; clk             ;
+;  dataIn[3] ; clk        ; 0.400  ; 0.400  ; Rise       ; clk             ;
+;  dataIn[4] ; clk        ; 0.367  ; 0.367  ; Rise       ; clk             ;
+;  dataIn[5] ; clk        ; -2.182 ; -2.182 ; Rise       ; clk             ;
+;  dataIn[6] ; clk        ; -2.040 ; -2.040 ; Rise       ; clk             ;
+;  dataIn[7] ; clk        ; -1.935 ; -1.935 ; Rise       ; clk             ;
+; sync[*]    ; clk        ; 0.398  ; 0.398  ; Rise       ; clk             ;
+;  sync[0]   ; clk        ; -2.046 ; -2.046 ; Rise       ; clk             ;
+;  sync[1]   ; clk        ; -2.217 ; -2.217 ; Rise       ; clk             ;
+;  sync[2]   ; clk        ; -1.947 ; -1.947 ; Rise       ; clk             ;
+;  sync[3]   ; clk        ; 0.385  ; 0.385  ; Rise       ; clk             ;
+;  sync[4]   ; clk        ; 0.398  ; 0.398  ; Rise       ; clk             ;
+;  sync[5]   ; clk        ; -2.205 ; -2.205 ; Rise       ; clk             ;
+;  sync[6]   ; clk        ; -1.968 ; -1.968 ; Rise       ; clk             ;
+;  sync[7]   ; clk        ; -1.931 ; -1.931 ; Rise       ; clk             ;
+; valid      ; clk        ; -1.907 ; -1.907 ; Rise       ; clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 7.078 ; 7.078 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 5.969 ; 5.969 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 6.111 ; 6.111 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 5.735 ; 5.735 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 7.460 ; 7.460 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 6.263 ; 6.263 ; Rise       ; clk             ;
+; ready      ; clk        ; 6.252 ; 6.252 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; OutMinus   ; clk        ; 3.745 ; 3.745 ; Rise       ; clk             ;
+; enableOut  ; clk        ; 3.343 ; 3.343 ; Rise       ; clk             ;
+; outNrzi    ; clk        ; 3.470 ; 3.470 ; Rise       ; clk             ;
+; outPiso    ; clk        ; 3.235 ; 3.235 ; Rise       ; clk             ;
+; outPlus    ; clk        ; 3.910 ; 3.910 ; Rise       ; clk             ;
+; outStuffer ; clk        ; 3.486 ; 3.486 ; Rise       ; clk             ;
+; ready      ; clk        ; 3.473 ; 3.473 ; Rise       ; clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 411      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 411      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 30       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 30       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 29    ; 29   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Oct 10 18:46:43 2022
+Info: Command: quartus_sta CompleteTransmitter -c CompleteTransmitter
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'CompleteTransmitter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.752
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.752       -48.350 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332146): Worst-case recovery slack is -0.717
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.717       -15.034 clk 
+Info (332146): Worst-case removal slack is 1.053
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     1.053         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -42.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.297
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.297        -4.564 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332146): Worst-case recovery slack is 0.091
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.091         0.000 clk 
+Info (332146): Worst-case removal slack is 0.593
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.593         0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -42.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4586 megabytes
+    Info: Processing ended: Mon Oct 10 18:46:44 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

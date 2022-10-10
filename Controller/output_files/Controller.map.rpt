@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Controller
-Sat Oct 08 20:13:46 2022
+Sun Oct 09 23:42:06 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -43,7 +43,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 08 20:13:46 2022         ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 09 23:42:06 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Controller                                    ;
 ; Top-level Entity Name              ; Controller                                    ;
@@ -266,7 +266,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Oct 08 20:13:41 2022
+    Info: Processing started: Sun Oct 09 23:42:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Controller -c Controller
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
@@ -280,9 +280,9 @@ Info (21057): Implemented 35 device resources after synthesis - the final resour
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 23 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 385 megabytes
-    Info: Processing ended: Sat Oct 08 20:13:46 2022
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 378 megabytes
+    Info: Processing ended: Sun Oct 09 23:42:06 2022
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 
