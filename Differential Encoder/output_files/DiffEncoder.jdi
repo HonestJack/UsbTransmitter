@@ -3,7 +3,7 @@
     <hash md5_digest_80b="00000000000000000000"/>
   </project>
   <file_info>
-    <file checksum="0x000743CF" device="EP2C5T144C6" path="DiffEncoder.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x07531887" device="EPCS4" path="DiffEncoder.pof" usercode="0x00000000"/>
+    <file checksum="0x00073D88" device="EP2C5T144C6" path="DiffEncoder.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x07532394" device="EPCS4" path="DiffEncoder.pof" usercode="0x00000000"/>
   </file_info>
 </sld_project_info>

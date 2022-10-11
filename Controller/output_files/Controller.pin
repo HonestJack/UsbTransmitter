@@ -84,18 +84,18 @@ clk                          : 17        : input  : 3.3-V LVTTL       :         
 resetIn                      : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
-loadShift                    : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-stuffing                     : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
+valid                        : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
+enableOut                    : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-GND*                         : 24        :        :                   :         : 1         :                
-GND*                         : 25        :        :                   :         : 1         :                
-GND*                         : 26        :        :                   :         : 1         :                
-GND*                         : 27        :        :                   :         : 1         :                
-ready                        : 28        : output : 3.3-V LVTTL       :         : 1         : N              
+enableNrzi                   : 24        : output : 3.3-V LVTTL       :         : 1         : N              
+enablePiso                   : 25        : output : 3.3-V LVTTL       :         : 1         : N              
+enableStuffer                : 26        : output : 3.3-V LVTTL       :         : 1         : N              
+syncData                     : 27        : output : 3.3-V LVTTL       :         : 1         : N              
+resetOut                     : 28        : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-valid                        : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
-enableOut                    : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
-resetOut                     : 32        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 30        :        :                   :         : 1         :                
+GND*                         : 31        :        :                   :         : 1         :                
+GND*                         : 32        :        :                   :         : 1         :                
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -103,10 +103,10 @@ GND_PLL1                     : 36        : gnd    :                   :         
 VCCA_PLL1                    : 37        : power  :                   : 1.2V    :           :                
 GNDA_PLL1                    : 38        : gnd    :                   :         :           :                
 GND                          : 39        : gnd    :                   :         :           :                
-enableStuffer                : 40        : output : 3.3-V LVTTL       :         : 4         : N              
-enableNrzi                   : 41        : output : 3.3-V LVTTL       :         : 4         : N              
-enablePiso                   : 42        : output : 3.3-V LVTTL       :         : 4         : N              
-syncData                     : 43        : output : 3.3-V LVTTL       :         : 4         : N              
+stuffing                     : 40        : input  : 3.3-V LVTTL       :         : 4         : N              
+ready                        : 41        : output : 3.3-V LVTTL       :         : 4         : N              
+loadShift                    : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 43        :        :                   :         : 4         :                
 GND*                         : 44        :        :                   :         : 4         :                
 GND*                         : 45        :        :                   :         : 4         :                
 VCCIO4                       : 46        : power  :                   : 3.3V    : 4         :                

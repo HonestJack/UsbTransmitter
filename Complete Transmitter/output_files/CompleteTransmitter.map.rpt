@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CompleteTransmitter
-Mon Oct 10 20:15:27 2022
+Mon Oct 10 22:08:37 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,9 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |CompleteTransmitter|Controller:inst5|state
+  8. State Machine - |CompleteTransmitter|Controller:inst4|state
   9. State Machine - |CompleteTransmitter|BitStuffer:inst2|state
- 10. State Machine - |CompleteTransmitter|DiffEncoder:inst4|state
+ 10. State Machine - |CompleteTransmitter|DiffEncoder:inst1|state
  11. Registers Protected by Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -48,15 +48,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 10 20:15:27 2022         ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 10 22:08:37 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CompleteTransmitter                           ;
 ; Top-level Entity Name              ; CompleteTransmitter                           ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 64                                            ;
-;     Total combinational functions  ; 59                                            ;
-;     Dedicated logic registers      ; 41                                            ;
-; Total registers                    ; 41                                            ;
+; Total logic elements               ; 61                                            ;
+;     Total combinational functions  ; 56                                            ;
+;     Dedicated logic registers      ; 40                                            ;
+; Total registers                    ; 40                                            ;
 ; Total pins                         ; 32                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -193,27 +193,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 64    ;
+; Estimated Total logic elements              ; 61    ;
 ;                                             ;       ;
-; Total combinational functions               ; 59    ;
+; Total combinational functions               ; 56    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 19    ;
-;     -- 3 input functions                    ; 15    ;
+;     -- 4 input functions                    ; 15    ;
+;     -- 3 input functions                    ; 16    ;
 ;     -- <=2 input functions                  ; 25    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 52    ;
+;     -- normal mode                          ; 49    ;
 ;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
-; Total registers                             ; 41    ;
-;     -- Dedicated logic registers            ; 41    ;
+; Total registers                             ; 40    ;
+;     -- Dedicated logic registers            ; 40    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 32    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 41    ;
-; Total fan-out                               ; 342   ;
-; Average fan-out                             ; 2.59  ;
+; Maximum fan-out                             ; 40    ;
+; Total fan-out                               ; 326   ;
+; Average fan-out                             ; 2.55  ;
 +---------------------------------------------+-------+
 
 
@@ -222,10 +222,10 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
-; |CompleteTransmitter       ; 59 (0)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |CompleteTransmitter                   ;              ;
+; |CompleteTransmitter       ; 56 (0)            ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |CompleteTransmitter                   ;              ;
 ;    |BitStuffer:inst2|      ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|BitStuffer:inst2  ;              ;
-;    |Controller:inst5|      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|Controller:inst5  ;              ;
-;    |DiffEncoder:inst4|     ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|DiffEncoder:inst4 ;              ;
+;    |Controller:inst4|      ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|Controller:inst4  ;              ;
+;    |DiffEncoder:inst1|     ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|DiffEncoder:inst1 ;              ;
 ;    |NrziDecoder:inst3|     ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|NrziDecoder:inst3 ;              ;
 ;    |Piso:inst|             ; 22 (22)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CompleteTransmitter|Piso:inst         ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------+--------------+
@@ -234,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |CompleteTransmitter|Controller:inst5|state                                                                                                             ;
+; State Machine - |CompleteTransmitter|Controller:inst4|state                                                                                                             ;
 +----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
 ; Name           ; state.estado_8 ; state.estado_7 ; state.estado_6 ; state.estado_5 ; state.estado_4 ; state.estado_3 ; state.estado_2 ; state.estado_1 ; state.estado_0 ;
 +----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
@@ -267,18 +267,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------+
-; State Machine - |CompleteTransmitter|DiffEncoder:inst4|state                                                         ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; Name           ; state.estado_5 ; state.estado_4 ; state.estado_3 ; state.estado_2 ; state.estado_1 ; state.estado_0 ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; state.estado_0 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
-; state.estado_1 ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
-; state.estado_2 ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
-; state.estado_3 ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
-; state.estado_4 ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
-; state.estado_5 ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; State Machine - |CompleteTransmitter|DiffEncoder:inst1|state                                        ;
++----------------+----------------+----------------+----------------+----------------+----------------+
+; Name           ; state.estado_4 ; state.estado_3 ; state.estado_2 ; state.estado_1 ; state.estado_0 ;
++----------------+----------------+----------------+----------------+----------------+----------------+
+; state.estado_0 ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; state.estado_1 ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; state.estado_2 ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; state.estado_3 ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; state.estado_4 ; 1              ; 0              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -302,25 +301,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 41    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 39    ;
+; Number of registers using Asynchronous Clear ; 38    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 25    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |CompleteTransmitter|Piso:inst|\piso:temp[7]     ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CompleteTransmitter|Controller:inst5|Selector6  ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |CompleteTransmitter|DiffEncoder:inst4|Selector1 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |CompleteTransmitter|Piso:inst|\piso:temp[5]    ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |CompleteTransmitter|Controller:inst4|Selector6 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
 +-----------------------------------------------+
@@ -364,7 +362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 10 20:15:24 2022
+    Info: Processing started: Mon Oct 10 22:08:34 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CompleteTransmitter -c CompleteTransmitter
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file completetransmitter.bdf
@@ -373,7 +371,7 @@ Info (12127): Elaborating entity "CompleteTransmitter" for the top level hierarc
 Warning (12125): Using design file diffencoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: DiffEncoder-comportamento
     Info (12023): Found entity 1: DiffEncoder
-Info (12128): Elaborating entity "DiffEncoder" for hierarchy "DiffEncoder:inst4"
+Info (12128): Elaborating entity "DiffEncoder" for hierarchy "DiffEncoder:inst1"
 Warning (12125): Using design file nrzidecoder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: NrziDecoder-comportamento
     Info (12023): Found entity 1: NrziDecoder
@@ -389,7 +387,7 @@ Info (12128): Elaborating entity "Piso" for hierarchy "Piso:inst"
 Warning (12125): Using design file controller.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Controller-comportamento
     Info (12023): Found entity 1: Controller
-Info (12128): Elaborating entity "Controller" for hierarchy "Controller:inst5"
+Info (12128): Elaborating entity "Controller" for hierarchy "Controller:inst4"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst6"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst6"
 Info (12133): Instantiated megafunction "BUSMUX:inst6" with the following parameter:
@@ -401,13 +399,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
 Info (12128): Elaborating entity "mux_smc" for hierarchy "BUSMUX:inst6|lpm_mux:$00000|mux_smc:auto_generated"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 96 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 93 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 64 logic cells
+    Info (21061): Implemented 61 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 387 megabytes
-    Info: Processing ended: Mon Oct 10 20:15:27 2022
+    Info: Processing ended: Mon Oct 10 22:08:37 2022
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

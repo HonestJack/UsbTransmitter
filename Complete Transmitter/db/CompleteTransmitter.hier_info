@@ -1,12 +1,12 @@
 |CompleteTransmitter
-outPlus <= DiffEncoder:inst4.dataOutPlus
-clk => DiffEncoder:inst4.clk
+outPlus <= DiffEncoder:inst1.dataOutPlus
+clk => DiffEncoder:inst1.clk
 clk => NrziDecoder:inst3.clk
 clk => BitStuffer:inst2.clk
 clk => Piso:inst.clk
-clk => Controller:inst5.clk
-valid => Controller:inst5.valid
-reset => Controller:inst5.resetIn
+clk => Controller:inst4.clk
+valid => Controller:inst4.valid
+reset => Controller:inst4.resetIn
 dataIn[0] => BUSMUX:inst6.dataa[0]
 dataIn[1] => BUSMUX:inst6.dataa[1]
 dataIn[2] => BUSMUX:inst6.dataa[2]
@@ -23,56 +23,36 @@ sync[4] => BUSMUX:inst6.datab[4]
 sync[5] => BUSMUX:inst6.datab[5]
 sync[6] => BUSMUX:inst6.datab[6]
 sync[7] => BUSMUX:inst6.datab[7]
-OutMinus <= DiffEncoder:inst4.dataOutMinus
-ready <= Controller:inst5.ready
+OutMinus <= DiffEncoder:inst1.dataOutMinus
+ready <= Controller:inst4.ready
 outPiso <= Piso:inst.dataOut
 outStuffer <= BitStuffer:inst2.dataOut
 outNrzi <= NrziDecoder:inst3.dataOut
-enableOut <= DiffEncoder:inst4.enableOut
-resetOut <= Controller:inst5.resetOut
-enableNrzi <= Controller:inst5.enableNrzi
-enableStuffer <= Controller:inst5.enableStuffer
-enablePiso <= Controller:inst5.enablePiso
+enableOut <= DiffEncoder:inst1.enableOut
+resetOut <= Controller:inst4.resetOut
+enableNrzi <= Controller:inst4.enableNrzi
+enableStuffer <= Controller:inst4.enableStuffer
+enablePiso <= Controller:inst4.enablePiso
 loadShift <= Piso:inst.loadShift
 stuffing <= BitStuffer:inst2.stopPiso
 
 
-|CompleteTransmitter|DiffEncoder:inst4
-clk => state~48.DATAIN
-dataIn => state~1.DATAB
-dataIn => state~18.OUTPUTSELECT
-dataIn => state~19.OUTPUTSELECT
-dataIn => state~20.OUTPUTSELECT
-dataIn => state~21.OUTPUTSELECT
-dataIn => state~22.OUTPUTSELECT
-dataIn => state~23.OUTPUTSELECT
-dataIn => state~6.OUTPUTSELECT
-dataIn => state~7.OUTPUTSELECT
-dataIn => state~8.OUTPUTSELECT
-dataIn => state~9.OUTPUTSELECT
-dataIn => state~10.OUTPUTSELECT
-dataIn => state~11.OUTPUTSELECT
-dataIn => state~2.DATAB
+|CompleteTransmitter|DiffEncoder:inst1
+clk => state~26.DATAIN
+dataIn => Selector5.IN3
+dataIn => dataOutMinus~0.DATAB
 enableIn => state~0.OUTPUTSELECT
 enableIn => state~1.OUTPUTSELECT
 enableIn => state~2.OUTPUTSELECT
 enableIn => state~3.OUTPUTSELECT
 enableIn => state~4.OUTPUTSELECT
 enableIn => state~5.OUTPUTSELECT
-enableIn => state~12.OUTPUTSELECT
-enableIn => state~13.OUTPUTSELECT
-enableIn => state~14.OUTPUTSELECT
-enableIn => state~15.OUTPUTSELECT
-enableIn => state~16.OUTPUTSELECT
-enableIn => state~17.OUTPUTSELECT
-enableIn => state~24.OUTPUTSELECT
-enableIn => state~25.OUTPUTSELECT
-enableIn => state~26.OUTPUTSELECT
-enableIn => state~27.OUTPUTSELECT
-enableIn => state~28.OUTPUTSELECT
-enableIn => state~29.OUTPUTSELECT
-reset => state~52.DATAIN
-dataOutPlus <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+enableIn => state~6.OUTPUTSELECT
+enableIn => state~7.OUTPUTSELECT
+enableIn => state~8.OUTPUTSELECT
+enableIn => state~9.OUTPUTSELECT
+reset => state~30.DATAIN
+dataOutPlus <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
 dataOutMinus <= dataOutMinus~0.DB_MAX_OUTPUT_PORT_TYPE
 enableOut <= enableOut~0.DB_MAX_OUTPUT_PORT_TYPE
 
@@ -202,7 +182,7 @@ loadShift <= loadShift~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dataOut <= dataOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CompleteTransmitter|Controller:inst5
+|CompleteTransmitter|Controller:inst4
 clk => state~60.DATAIN
 enableOut => state~27.OUTPUTSELECT
 enableOut => state~28.OUTPUTSELECT

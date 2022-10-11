@@ -51,7 +51,7 @@ BEGIN
 				WHEN estado_7 =>
 						state <= estado_8;
 				WHEN estado_8 =>
-						IF enableOut='1' then state <= estado_0;
+						IF enableOut='0' then state <= estado_0;
 						END IF;
 			END CASE;
 		END IF;

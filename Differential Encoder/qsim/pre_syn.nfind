@@ -18,7 +18,6 @@ state.estado_1,comb,user_entered
 state.estado_2,comb,user_entered
 state.estado_3,comb,user_entered
 state.estado_4,comb,user_entered
-state.estado_5,comb,user_entered
 state~0,comb,compiler_generated
 state~1,comb,compiler_generated
 state~2,comb,compiler_generated
@@ -27,8 +26,6 @@ state~4,comb,compiler_generated
 state~5,comb,compiler_generated
 state~6,comb,compiler_generated
 state~7,comb,compiler_generated
-state~8,comb,compiler_generated
 WideNor0,comb,user_entered
 WideOr0,comb,user_entered
-WideOr1,comb,user_entered
 ,hierarchy,user_entered

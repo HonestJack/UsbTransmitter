@@ -10,15 +10,11 @@ enableOut,output,user_entered
 reset,input,user_entered
 Selector0~0,comb,compiler_generated
 Selector1~0,comb,compiler_generated
-Selector1~1,comb,compiler_generated
 Selector2~0,comb,compiler_generated
-Selector3~0,comb,compiler_generated
+Selector5~0,comb,compiler_generated
 state.estado_0,reg,user_entered
 state.estado_1,reg,user_entered
 state.estado_2,reg,user_entered
 state.estado_3,reg,user_entered
 state.estado_4,reg,user_entered
-state.estado_5,reg,user_entered
-WideOr1,comb,user_entered
-WideOr1~0,comb,compiler_generated
 ,hierarchy,user_entered

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DiffEncoder
-Sun Oct 09 23:41:47 2022
+Mon Oct 10 20:52:37 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,9 +15,8 @@ Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Editio
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |DiffEncoder|state
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +42,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 09 23:41:47 2022         ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 10 20:52:37 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; DiffEncoder                                   ;
 ; Top-level Entity Name              ; DiffEncoder                                   ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 10                                            ;
-;     Total combinational functions  ; 8                                             ;
-;     Dedicated logic registers      ; 6                                             ;
-; Total registers                    ; 6                                             ;
+; Total logic elements               ; 7                                             ;
+;     Total combinational functions  ; 5                                             ;
+;     Dedicated logic registers      ; 5                                             ;
+; Total registers                    ; 5                                             ;
 ; Total pins                         ; 7                                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 0                                             ;
@@ -175,27 +174,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 10    ;
+; Estimated Total logic elements              ; 7     ;
 ;                                             ;       ;
-; Total combinational functions               ; 8     ;
+; Total combinational functions               ; 5     ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 3     ;
+;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 3     ;
 ;     -- <=2 input functions                  ; 2     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 8     ;
+;     -- normal mode                          ; 5     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 6     ;
-;     -- Dedicated logic registers            ; 6     ;
+; Total registers                             ; 5     ;
+;     -- Dedicated logic registers            ; 5     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 7     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 6     ;
-; Total fan-out                               ; 46    ;
-; Average fan-out                             ; 2.19  ;
+; Maximum fan-out                             ; 5     ;
+; Total fan-out                               ; 31    ;
+; Average fan-out                             ; 1.82  ;
 +---------------------------------------------+-------+
 
 
@@ -204,24 +203,23 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |DiffEncoder               ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |DiffEncoder        ;              ;
+; |DiffEncoder               ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |DiffEncoder        ;              ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------+
-; State Machine - |DiffEncoder|state                                                                                   ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; Name           ; state.estado_5 ; state.estado_4 ; state.estado_3 ; state.estado_2 ; state.estado_1 ; state.estado_0 ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
-; state.estado_0 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ;
-; state.estado_1 ; 0              ; 0              ; 0              ; 0              ; 1              ; 1              ;
-; state.estado_2 ; 0              ; 0              ; 0              ; 1              ; 0              ; 1              ;
-; state.estado_3 ; 0              ; 0              ; 1              ; 0              ; 0              ; 1              ;
-; state.estado_4 ; 0              ; 1              ; 0              ; 0              ; 0              ; 1              ;
-; state.estado_5 ; 1              ; 0              ; 0              ; 0              ; 0              ; 1              ;
-+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; State Machine - |DiffEncoder|state                                                                  ;
++----------------+----------------+----------------+----------------+----------------+----------------+
+; Name           ; state.estado_4 ; state.estado_3 ; state.estado_2 ; state.estado_1 ; state.estado_0 ;
++----------------+----------------+----------------+----------------+----------------+----------------+
+; state.estado_0 ; 0              ; 0              ; 0              ; 0              ; 0              ;
+; state.estado_1 ; 0              ; 0              ; 0              ; 1              ; 1              ;
+; state.estado_2 ; 0              ; 0              ; 1              ; 0              ; 1              ;
+; state.estado_3 ; 0              ; 1              ; 0              ; 0              ; 1              ;
+; state.estado_4 ; 1              ; 0              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+----------------+
 
 
 +------------------------------------------------------+
@@ -229,23 +227,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 6     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 6     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |DiffEncoder|Selector1     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -263,7 +252,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 09 23:41:45 2022
+    Info: Processing started: Mon Oct 10 20:52:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DiffEncoder -c DiffEncoder
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file diffencoder.vhd
@@ -272,13 +261,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file diffenc
 Info (12127): Elaborating entity "DiffEncoder" for the top level hierarchy
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 14 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 10 logic cells
+    Info (21061): Implemented 7 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 378 megabytes
-    Info: Processing ended: Sun Oct 09 23:41:47 2022
+    Info: Peak virtual memory: 390 megabytes
+    Info: Processing ended: Mon Oct 10 20:52:37 2022
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
