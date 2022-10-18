@@ -1,9 +1,10 @@
 CompleteTransmitter
 Piso:inst|
+DiffEncoder:inst1|
 BitStuffer:inst2|
 NrziDecoder:inst3|
-DiffEncoder:inst4|
-Controller:inst5|
+Controller:inst4|
 busmux:inst6|
 busmux:inst6|lpm_mux:$00000|
+SyncConst:inst5|
 busmux:inst6|lpm_mux:$00000|mux_smc:auto_generated|

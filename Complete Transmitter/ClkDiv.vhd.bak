@@ -1,0 +1,30 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity ClkDiv is
+     port(
+         clk : in STD_LOGIC;
+         clkOut : out STD_LOGIC
+         );
+end ClkDiv;
+
+
+architecture arch of ClkDiv is
+	SIGNAL counter : Integer range 0 to 1023;
+	attribute keep: boolean;
+	attribute keep of counter: signal is true;
+begin
+
+    clkDiv : process (clk, reset, enable, stuffing, dataIn) is
+    variable temp : std_logic_vector (7 downto 0);
+	 begin		
+		if clk'event AND clk = '1' then
+			counter <= counter + 1;
+			if couter = 500 then
+				clkOut = not clkOut;
+				counter = 0;
+			end if;
+		end if;
+	end process clkDiv;
+end arch;

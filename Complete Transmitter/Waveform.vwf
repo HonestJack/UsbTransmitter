@@ -272,96 +272,6 @@ SIGNAL("stuffing")
 	PARENT = "";
 }
 
-SIGNAL("sync")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = BUS;
-	WIDTH = 8;
-	LSB_INDEX = 0;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("sync[7]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[6]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[5]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[4]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[3]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[2]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[1]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
-SIGNAL("sync[0]")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "sync";
-}
-
 SIGNAL("valid")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -402,6 +312,96 @@ SIGNAL("busmux:inst6|lpm_mux:$00000|data[0]")
 	PARENT = "busmux:inst6|lpm_mux:$00000|data";
 }
 
+SIGNAL("Sync")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("Sync[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
+SIGNAL("Sync[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "Sync";
+}
+
 TRANSITION_LIST("clk")
 {
 	NODE
@@ -409,9 +409,9 @@ TRANSITION_LIST("clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 50000;
+			LEVEL 0 FOR 0.01;
+			LEVEL 1 FOR 0.01;
 		}
 	}
 }
@@ -422,7 +422,9 @@ TRANSITION_LIST("dataIn[7]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 720.0;
+		LEVEL 1 FOR 340.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 200.0;
 		LEVEL 0 FOR 140.0;
 	}
 }
@@ -432,8 +434,8 @@ TRANSITION_LIST("dataIn[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 440.0;
-		LEVEL 1 FOR 420.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 540.0;
 		LEVEL 0 FOR 140.0;
 	}
 }
@@ -455,7 +457,9 @@ TRANSITION_LIST("dataIn[4]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 720.0;
+		LEVEL 1 FOR 340.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 200.0;
 		LEVEL 0 FOR 140.0;
 	}
 }
@@ -465,8 +469,8 @@ TRANSITION_LIST("dataIn[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 440.0;
-		LEVEL 1 FOR 420.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 540.0;
 		LEVEL 0 FOR 140.0;
 	}
 }
@@ -476,7 +480,9 @@ TRANSITION_LIST("dataIn[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 0 FOR 480.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 340.0;
 	}
 }
 
@@ -486,8 +492,8 @@ TRANSITION_LIST("dataIn[1]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 300.0;
-		LEVEL 0 FOR 560.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 680.0;
 	}
 }
 
@@ -497,8 +503,10 @@ TRANSITION_LIST("dataIn[0]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 300.0;
-		LEVEL 0 FOR 560.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 160.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 340.0;
 	}
 }
 
@@ -628,78 +636,6 @@ TRANSITION_LIST("stuffing")
 	}
 }
 
-TRANSITION_LIST("sync[7]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[6]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[5]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("sync[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
 TRANSITION_LIST("valid")
 {
 	NODE
@@ -725,6 +661,78 @@ TRANSITION_LIST("busmux:inst6|lpm_mux:$00000|data[0]")
 	{
 		REPEAT = 1;
 		LEVEL U FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("Sync[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -964,17 +972,17 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync";
+	CHANNEL = "busmux:inst6|lpm_mux:$00000|data";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;
 	TREE_LEVEL = 0;
-	CHILDREN = 26, 27, 28, 29, 30, 31, 32, 33;
+	CHILDREN = 26, 27;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[7]";
+	CHANNEL = "busmux:inst6|lpm_mux:$00000|data[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
@@ -984,7 +992,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[6]";
+	CHANNEL = "busmux:inst6|lpm_mux:$00000|data[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
@@ -994,97 +1002,103 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[5]";
+	CHANNEL = "Sync";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 28;
-	TREE_LEVEL = 1;
-	PARENT = 25;
+	TREE_LEVEL = 0;
+	CHILDREN = 29, 30, 31, 32, 33, 34, 35, 36;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[4]";
+	CHANNEL = "Sync[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 29;
 	TREE_LEVEL = 1;
-	PARENT = 25;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[3]";
+	CHANNEL = "Sync[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 30;
 	TREE_LEVEL = 1;
-	PARENT = 25;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[2]";
+	CHANNEL = "Sync[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 31;
 	TREE_LEVEL = 1;
-	PARENT = 25;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[1]";
+	CHANNEL = "Sync[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 32;
 	TREE_LEVEL = 1;
-	PARENT = 25;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "sync[0]";
+	CHANNEL = "Sync[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 33;
 	TREE_LEVEL = 1;
-	PARENT = 25;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "busmux:inst6|lpm_mux:$00000|data";
+	CHANNEL = "Sync[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 34;
-	TREE_LEVEL = 0;
-	CHILDREN = 35, 36;
+	TREE_LEVEL = 1;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "busmux:inst6|lpm_mux:$00000|data[1]";
+	CHANNEL = "Sync[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 35;
 	TREE_LEVEL = 1;
-	PARENT = 34;
+	PARENT = 28;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "busmux:inst6|lpm_mux:$00000|data[0]";
+	CHANNEL = "Sync[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 36;
 	TREE_LEVEL = 1;
-	PARENT = 34;
+	PARENT = 28;
 }
 
 TIME_BAR
 {
 	TIME = 0;
 	MASTER = TRUE;
+}
+
+TIME_BAR
+{
+	TIME = 773500;
+	MASTER = FALSE;
 }
 ;

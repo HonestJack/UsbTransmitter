@@ -428,9 +428,7 @@ TRANSITION_LIST("stuffing")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 380.0;
-		LEVEL 1 FOR 40.0;
-		LEVEL 0 FOR 580.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 

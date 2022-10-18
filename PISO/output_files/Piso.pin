@@ -84,18 +84,18 @@ clk                          : 17        : input  : 3.3-V LVTTL       :         
 reset                        : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 19        : gnd    :                   :         :           :                
 nCONFIG                      : 20        :        :                   :         : 1         :                
-dataIn[7]                    : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[6]                    : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[0]                    : 21        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[1]                    : 22        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 23        : power  :                   : 3.3V    : 1         :                
-dataIn[4]                    : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[3]                    : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
 dataOut                      : 25        : output : 3.3-V LVTTL       :         : 1         : N              
 stuffing                     : 26        : input  : 3.3-V LVTTL       :         : 1         : N              
 loadShift                    : 27        : output : 3.3-V LVTTL       :         : 1         : N              
-dataIn[5]                    : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[2]                    : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
-dataIn[3]                    : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[4]                    : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
 enable                       : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
-dataIn[2]                    : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
+dataIn[5]                    : 32        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 33        : gnd    :                   :         :           :                
 GND_PLL1                     : 34        : gnd    :                   :         :           :                
 VCCD_PLL1                    : 35        : power  :                   : 1.2V    :           :                
@@ -105,7 +105,7 @@ GNDA_PLL1                    : 38        : gnd    :                   :         
 GND                          : 39        : gnd    :                   :         :           :                
 GND*                         : 40        :        :                   :         : 4         :                
 GND*                         : 41        :        :                   :         : 4         :                
-dataIn[0]                    : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
+dataIn[7]                    : 42        : input  : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 43        :        :                   :         : 4         :                
 GND*                         : 44        :        :                   :         : 4         :                
 GND*                         : 45        :        :                   :         : 4         :                
@@ -206,5 +206,5 @@ GND*                         : 139       :        :                   :         
 GND                          : 140       : gnd    :                   :         :           :                
 GND*                         : 141       :        :                   :         : 2         :                
 GND*                         : 142       :        :                   :         : 2         :                
-dataIn[1]                    : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
+dataIn[6]                    : 143       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 144       :        :                   :         : 2         :                

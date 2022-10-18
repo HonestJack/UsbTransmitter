@@ -1,5 +1,5 @@
 Simulator report for Piso
-Sun Oct 09 21:15:09 2022
+Mon Oct 17 19:14:47 2022
 Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 84 nodes     ;
-; Simulation Coverage         ;      69.88 % ;
-; Total Number of Transitions ; 741          ;
+; Simulation Netlist Size     ; 82 nodes     ;
+; Simulation Coverage         ;      67.07 % ;
+; Total Number of Transitions ; 859          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
@@ -94,13 +94,13 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      69.88 % ;
-; Total nodes checked                                 ; 84           ;
-; Total output ports checked                          ; 83           ;
-; Total output ports with complete 1/0-value coverage ; 58           ;
-; Total output ports with no 1/0-value coverage       ; 25           ;
-; Total output ports with no 1-value coverage         ; 25           ;
-; Total output ports with no 0-value coverage         ; 25           ;
+; Total coverage as a percentage                      ;      67.07 % ;
+; Total nodes checked                                 ; 82           ;
+; Total output ports checked                          ; 82           ;
+; Total output ports with complete 1/0-value coverage ; 55           ;
+; Total output ports with no 1/0-value coverage       ; 27           ;
+; Total output ports with no 1-value coverage         ; 27           ;
+; Total output ports with no 0-value coverage         ; 27           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -110,8 +110,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +----------------------+----------------------+------------------+
 ; Node Name            ; Output Port Name     ; Output Port Type ;
 +----------------------+----------------------+------------------+
-; |Piso|dataOut~reg0   ; |Piso|dataOut~reg0   ; regout           ;
-; |Piso|dataOut~0      ; |Piso|dataOut~0      ; out              ;
+; |Piso|loadShift~reg0 ; |Piso|loadShift~reg0 ; regout           ;
+; |Piso|loadShift~0    ; |Piso|loadShift~0    ; out              ;
 ; |Piso|counter~4      ; |Piso|counter~4      ; out              ;
 ; |Piso|counter~5      ; |Piso|counter~5      ; out              ;
 ; |Piso|counter~6      ; |Piso|counter~6      ; out              ;
@@ -124,12 +124,12 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Piso|temp~5         ; |Piso|temp~5         ; out              ;
 ; |Piso|temp~6         ; |Piso|temp~6         ; out              ;
 ; |Piso|temp~7         ; |Piso|temp~7         ; out              ;
-; |Piso|dataOut~1      ; |Piso|dataOut~1      ; out              ;
+; |Piso|dataOut~0      ; |Piso|dataOut~0      ; out              ;
 ; |Piso|counter~12     ; |Piso|counter~12     ; out              ;
 ; |Piso|counter~13     ; |Piso|counter~13     ; out              ;
 ; |Piso|counter~14     ; |Piso|counter~14     ; out              ;
 ; |Piso|counter~15     ; |Piso|counter~15     ; out              ;
-; |Piso|loadShift~0    ; |Piso|loadShift~0    ; out              ;
+; |Piso|loadShift~1    ; |Piso|loadShift~1    ; out              ;
 ; |Piso|temp~8         ; |Piso|temp~8         ; out              ;
 ; |Piso|temp~9         ; |Piso|temp~9         ; out              ;
 ; |Piso|temp~10        ; |Piso|temp~10        ; out              ;
@@ -138,13 +138,11 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Piso|temp~13        ; |Piso|temp~13        ; out              ;
 ; |Piso|temp~14        ; |Piso|temp~14        ; out              ;
 ; |Piso|temp~15        ; |Piso|temp~15        ; out              ;
-; |Piso|dataOut~2      ; |Piso|dataOut~2      ; out              ;
-; |Piso|loadShift~1    ; |Piso|loadShift~1    ; out              ;
-; |Piso|loadShift~reg0 ; |Piso|loadShift~reg0 ; regout           ;
+; |Piso|dataOut~1      ; |Piso|dataOut~1      ; out              ;
+; |Piso|dataOut~reg0   ; |Piso|dataOut~reg0   ; regout           ;
 ; |Piso|counter[0]     ; |Piso|counter[0]     ; regout           ;
 ; |Piso|counter[1]     ; |Piso|counter[1]     ; regout           ;
 ; |Piso|counter[2]     ; |Piso|counter[2]     ; regout           ;
-; |Piso|counter[3]     ; |Piso|counter[3]     ; regout           ;
 ; |Piso|\piso:temp[0]  ; |Piso|\piso:temp[0]  ; regout           ;
 ; |Piso|\piso:temp[1]  ; |Piso|\piso:temp[1]  ; regout           ;
 ; |Piso|\piso:temp[2]  ; |Piso|\piso:temp[2]  ; regout           ;
@@ -155,7 +153,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |Piso|\piso:temp[7]  ; |Piso|\piso:temp[7]  ; regout           ;
 ; |Piso|clk            ; |Piso|clk            ; out              ;
 ; |Piso|enable         ; |Piso|enable         ; out              ;
-; |Piso|stuffing       ; |Piso|stuffing       ; out              ;
 ; |Piso|dataIn[0]      ; |Piso|dataIn[0]      ; out              ;
 ; |Piso|dataIn[4]      ; |Piso|dataIn[4]      ; out              ;
 ; |Piso|dataIn[5]      ; |Piso|dataIn[5]      ; out              ;
@@ -185,11 +182,13 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |Piso|counter~9  ; |Piso|counter~9  ; out              ;
 ; |Piso|counter~10 ; |Piso|counter~10 ; out              ;
 ; |Piso|counter~11 ; |Piso|counter~11 ; out              ;
+; |Piso|counter[3] ; |Piso|counter[3] ; regout           ;
 ; |Piso|counter[4] ; |Piso|counter[4] ; regout           ;
 ; |Piso|counter[5] ; |Piso|counter[5] ; regout           ;
 ; |Piso|counter[6] ; |Piso|counter[6] ; regout           ;
 ; |Piso|counter[7] ; |Piso|counter[7] ; regout           ;
 ; |Piso|reset      ; |Piso|reset      ; out              ;
+; |Piso|stuffing   ; |Piso|stuffing   ; out              ;
 ; |Piso|dataIn[1]  ; |Piso|dataIn[1]  ; out              ;
 ; |Piso|dataIn[2]  ; |Piso|dataIn[2]  ; out              ;
 ; |Piso|dataIn[3]  ; |Piso|dataIn[3]  ; out              ;
@@ -219,11 +218,13 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |Piso|counter~9  ; |Piso|counter~9  ; out              ;
 ; |Piso|counter~10 ; |Piso|counter~10 ; out              ;
 ; |Piso|counter~11 ; |Piso|counter~11 ; out              ;
+; |Piso|counter[3] ; |Piso|counter[3] ; regout           ;
 ; |Piso|counter[4] ; |Piso|counter[4] ; regout           ;
 ; |Piso|counter[5] ; |Piso|counter[5] ; regout           ;
 ; |Piso|counter[6] ; |Piso|counter[6] ; regout           ;
 ; |Piso|counter[7] ; |Piso|counter[7] ; regout           ;
 ; |Piso|reset      ; |Piso|reset      ; out              ;
+; |Piso|stuffing   ; |Piso|stuffing   ; out              ;
 ; |Piso|dataIn[1]  ; |Piso|dataIn[1]  ; out              ;
 ; |Piso|dataIn[2]  ; |Piso|dataIn[2]  ; out              ;
 ; |Piso|dataIn[3]  ; |Piso|dataIn[3]  ; out              ;
@@ -252,19 +253,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Oct 09 21:15:09 2022
+    Info: Processing started: Mon Oct 17 19:14:46 2022
 Info: Command: quartus_sim --simulation_results_format=VWF Piso -c Piso
 Info (324025): Using vector source file "C:/Users/mucar/OneDrive/Documentos/UFRGS/Sistemas Digitais/Projeto Final/PISO/Waveform1.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "load" in design.
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      69.88 %
-Info (328052): Number of transitions in simulation is 741
+Info (328053): Simulation coverage is      67.07 %
+Info (328052): Number of transitions in simulation is 859
 Info (324045): Vector file Piso.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4455 megabytes
-    Info: Processing ended: Sun Oct 09 21:15:09 2022
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Mon Oct 17 19:14:47 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

@@ -1,5 +1,5 @@
 Flow report for CompleteTransmitter
-Mon Oct 10 22:08:47 2022
+Tue Oct 18 00:07:55 2022
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,22 +38,22 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Mon Oct 10 22:08:44 2022         ;
+; Flow Status                        ; Successful - Tue Oct 18 00:07:51 2022         ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CompleteTransmitter                           ;
 ; Top-level Entity Name              ; CompleteTransmitter                           ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 58 / 4,608 ( 1 % )                            ;
-;     Total combinational functions  ; 56 / 4,608 ( 1 % )                            ;
-;     Dedicated logic registers      ; 40 / 4,608 ( < 1 % )                          ;
-; Total registers                    ; 40                                            ;
-; Total pins                         ; 32 / 89 ( 36 % )                              ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 0 / 119,808 ( 0 % )                           ;
-; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                                 ;
-; Device                             ; EP2C5T144C6                                   ;
+; Device                             ; EP2C35F672C6                                  ;
 ; Timing Models                      ; Final                                         ;
+; Total logic elements               ; 78 / 33,216 ( < 1 % )                         ;
+;     Total combinational functions  ; 76 / 33,216 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 51 / 33,216 ( < 1 % )                         ;
+; Total registers                    ; 51                                            ;
+; Total pins                         ; 32 / 475 ( 7 % )                              ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0 / 483,840 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
 +------------------------------------+-----------------------------------------------+
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/10/2022 22:08:34 ;
+; Start date & time ; 10/18/2022 00:07:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CompleteTransmitter ;
 +-------------------+---------------------+
@@ -73,7 +73,9 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 229335797738765.166545051414432 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 229335797738765.166606244719628 ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top        ;
@@ -86,11 +88,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 384 MB              ; 00:00:02                           ;
-; Fitter                    ; 00:00:02     ; 1.0                     ; 475 MB              ; 00:00:03                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 353 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 355 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 388 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:09     ; 2.0                     ; 527 MB              ; 00:00:09                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 377 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 365 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:22     ; --                      ; --                  ; 00:00:17                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
